@@ -157,6 +157,7 @@ body header section {
   display: flex;
 }
 body header section .logo {
+  align-content: center;
   display: flex;
   gap: 30px;
 }
@@ -168,6 +169,9 @@ body header section .logo h1 {
   color: rgb(9, 181, 9);
   font-weight: 600;
   font-family: "Great Vibes", cursive;
+}
+body header section div .navigation {
+  align-content: center;
 }
 body header section div .navigation ul {
   display: flex;

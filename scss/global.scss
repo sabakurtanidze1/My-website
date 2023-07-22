@@ -16,6 +16,7 @@ body {
       justify-content: space-between;
       display: flex;
       .logo {
+        align-content: center;
         display: flex;
         gap: 30px;
         img {
@@ -30,6 +31,7 @@ body {
       }
       div {
         .navigation {
+          align-content: center;
           ul {
             display: flex;
             gap: 50px;
