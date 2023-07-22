@@ -15,7 +15,12 @@ body {
       width: 100%;
       justify-content: space-between;
       display: flex;
-      div {
+      .logo {
+        display: flex;
+        gap: 30px;
+        img {
+          height: 40px;
+        }
         h1 {
           font-size: 45px;
           color: rgb(9, 181, 9);
@@ -24,26 +29,51 @@ body {
         }
       }
       div {
-        nav {
+        .navigation {
           ul {
             display: flex;
             gap: 50px;
-            li {
-              a {
-                font-weight: 400;
-                font-size: 18px;
-                color: rgba(32, 26, 26, 0.988);
-                font-family: "Noto Sans", sans-serif;
-                transition: transform 0.8s, ease-in-out;
-              }
-              a:hover {
-                transform: translate(0, -8px);
-                transition-duration: 0.8s;
-                background-color: rgb(232, 217, 200);
-              }
+            #active {
+              color: gray;
+            }
+            .link {
+              width: 100px;
+              text-align: center;
+              transition: transform, ease-in-out 0.4s;
+              font-weight: 600;
+              font-size: 18px;
+              color: rgba(32, 26, 26, 0.988);
+              font-family: "Noto Sans", sans-serif;
+            }
+            .link:hover {
+              transform: translateY(-8px);
+              border-bottom: 2px solid;
+              background-color: rgb(175, 198, 183);
             }
           }
         }
+      }
+    }
+  }
+  main {
+    margin-top: 20px;
+    .underheader {
+      .bg-Nature {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 240px 100px;
+        h2 {
+          font-size: 240px;
+          font-family: Georgia, "Times New Roman", Times, serif;
+          color: white;
+          font-weight: 600;
+        }
+        font-size: 170px;
+        @include bestchoice;
+        height: 810px;
+        background-image: url(../images/janez-fabijan-VXzbVm24ap8-unsplash.jpg);
+        @include bg-photos;
       }
     }
   }
