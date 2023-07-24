@@ -147,10 +147,8 @@ a {
 body main .destinations .tittle p {
   color: #fff;
   text-align: center;
-  font-family: "Noto Sans", sans-serif;
   font-size: 26px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
 
@@ -163,7 +161,7 @@ body header {
   height: 109px;
 }
 body header section {
-  opacity: 0.5;
+  opacity: 0.6;
   align-items: center;
   z-index: 1;
   border-bottom: 2px solid black;
@@ -233,12 +231,17 @@ body main .underheader .bg-Nature {
   flex-direction: column;
   justify-content: space-between;
   padding: 240px 100px;
+  height: 810px;
+  background-image: url(../images/borjomi.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body main .underheader .bg-Nature h1 {
-  font-size: 140px;
-  color: #ffd600;
+  font-size: 100px;
+  font-family: "BPG Mikheil Stefane", sans-serif;
+  color: #ffc700;
   font-weight: 600;
-  font-family: "BPG Phone Sans Bold Italic", sans-serif;
 }
 body main .underheader .bg-Nature h2 {
   font-size: 140px;
@@ -247,11 +250,11 @@ body main .underheader .bg-Nature h2 {
   font-weight: 600;
 }
 body main .underheader .flex {
-  transform: translate(1000px, 415px);
+  transform: translate(1100px, 439px);
   position: absolute;
   display: flex;
   gap: 40px;
-  width: 400px;
+  width: 300px;
   height: 90px;
 }
 body main .underheader .flex .photo {
@@ -260,7 +263,7 @@ body main .underheader .flex .photo {
   align-items: center;
   width: 88px;
   height: 88px;
-  background-color: aqua;
+  background-color: rgb(255, 186, 0);
   border: 2px solid;
   border-radius: 45px;
   border-color: black;
@@ -289,14 +292,15 @@ body main .underheader .flex div {
   width: 150px;
 }
 body main .underheader .flex div p {
-  font-size: 17px;
-  color: white;
-  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.99);
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
 body main .destinations {
   height: 1010px;
-  background: rgb(16, 255, 88);
-  background: linear-gradient(180deg, rgb(16, 255, 88) 0%, rgb(22, 235, 218) 71%, rgb(242, 252, 255) 100%);
+  background: rgb(215, 220, 221);
+  background: linear-gradient(180deg, rgb(215, 220, 221) 0%, rgb(230, 237, 236) 53%, rgb(245, 252, 255) 100%);
 }
 body main .destinations .tittle {
   margin-bottom: 90px;
@@ -310,8 +314,8 @@ body main .destinations .tittle {
 body main .destinations .tittle h1 {
   color: #ffd600;
   text-align: center;
-  font-family: "Allison", cursive;
-  font-size: 80px;
+  font-family: "BPG Mikheil Stefane", sans-serif;
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: 82.8%;
@@ -319,7 +323,7 @@ body main .destinations .tittle h1 {
 body main .destinations .tittle h2 {
   color: #fff;
   text-align: center;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
   font-size: 80px;
   font-style: normal;
   font-weight: 900;
@@ -329,12 +333,14 @@ body main .destinations .tittle h2 {
 body main .destinations .tittle div {
   width: 50px;
   height: 30px;
-  background-color: aqua;
+  background-color: #abbaba;
   border: 0px solid;
   border-radius: 35px;
 }
 body main .destinations .tittle p {
-  width: 1012px;
+  font-family: "BPG Mikheil Stefane", sans-serif;
+  width: 912px;
+  font-weight: 800;
 }
 body main .destinations .locations {
   display: flex;
@@ -374,5 +380,5 @@ body main .destinations .locations .picture {
   transition: transform 0.4s ease-in-out;
 }
 body main .destinations .locations .picture:hover {
-  transform: translateY(-15px) skewY(3deg) scale(1.06);
+  transform: translateY(-15px) scale(1.06);
 }/*# sourceMappingURL=global.css.map */
