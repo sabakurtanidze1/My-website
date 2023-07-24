@@ -155,19 +155,27 @@ body main .destinations .tittle p {
 
 body {
   width: 100%;
-  height: 2000px;
+  height: 2400px;
 }
 body header {
   width: 100%;
-  height: 90px;
+  height: 109px;
 }
 body header section {
+  opacity: 0.5;
+  align-items: center;
   z-index: 1;
+  border-bottom: 2px solid black;
+  background-color: whitesmoke;
+  position: fixed;
   top: 0px;
   padding: 35px 100px;
   width: 100%;
   justify-content: space-between;
   display: flex;
+}
+body header section:hover {
+  opacity: 1;
 }
 body header section .logo {
   display: flex;
@@ -175,6 +183,10 @@ body header section .logo {
 }
 body header section .logo img {
   height: 40px;
+}
+body header section div .navigation {
+  height: 40px;
+  margin-top: 17px;
 }
 body header section div .navigation ul {
   display: flex;
@@ -193,7 +205,7 @@ body header section div .navigation ul .link {
   font-family: "Noto Sans", sans-serif;
 }
 body header section div .navigation ul .link:hover {
-  transform: translateY(-4px);
+  transform: translateY(-7px);
   border-bottom: 3px solid #5cace4;
   color: #5cace4;
 }
@@ -212,8 +224,8 @@ body main .underheader .bg-Nature {
   height: 810px;
   background-image: url(../images/janez-fabijan-VXzbVm24ap8-unsplash.jpg);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 body main .underheader .bg-Nature h2 {
   font-size: 240px;
@@ -316,25 +328,25 @@ body main .destinations .locations {
   flex-direction: row;
   justify-content: space-evenly;
 }
-body main .destinations .locations .picture:nth-child(1) {
+body main .destinations .locations .button:nth-child(1) .picture {
   background-image: url(../images/borjomi1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .picture:nth-child(2) {
+body main .destinations .locations .button:nth-child(2) .picture {
   background-image: url(../images/borjomi2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .picture:nth-child(3) {
+body main .destinations .locations .button:nth-child(3) .picture {
   background-image: url(../images/blue-palace-firuza-firuza.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .picture:nth-child(4) {
+body main .destinations .locations .button:nth-child(4) .picture {
   background-image: url(../images/green-monastery-totale-2-1000.jpg);
   background-position: center;
   background-repeat: no-repeat;
