@@ -2,9 +2,11 @@
 @import "variables";
 @import "mixins";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
+@import url("//cdn.web-fonts.ge/fonts/bpg-mikheil-stefane/css/bpg-mikheil-stefane.min.css");
 
-@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mkhedruli-bold/css/bpg-nino-mkhedruli-bold.min.css");
+
+@import url("//cdn.web-fonts.ge/fonts/bpg-phone-sans-bold-italic/css/bpg-phone-sans-bold-italic.min.css");
 
 body {
   width: 100%;
@@ -17,10 +19,10 @@ body {
       align-items: center;
       z-index: 1;
       border-bottom: 2px solid black;
-      background-color: whitesmoke;
+      background-color: white;
       position: fixed;
       top: 0px;
-      padding: 35px 100px;
+      padding: 35px 80px;
       width: 100%;
       justify-content: space-between;
       display: flex;
@@ -51,22 +53,41 @@ body {
           margin-top: 17px;
           ul {
             display: flex;
-            gap: 50px;
+            gap: 40px;
             #active {
               color: gray;
             }
             .link {
-              width: 100px;
+              width: 140px;
               text-align: center;
               transition: transform, all ease-in-out 0.4s;
               font-weight: 600;
-              font-size: 18px;
+              font-size: 20px;
               color: rgba(32, 26, 26, 0.988);
-              font-family: "Noto Sans", sans-serif;
+              // font-family: "BPG Phone Sans Bold Italic", sans-serif;
+              // font-family: "BPG Mikheil Stefane", sans-serif;
+              font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+              i {
+                margin-right: 7px;
+              }
               &:hover {
                 transform: translateY(-7px);
                 border-bottom: 3px solid #5cace4;
                 color: #5cace4;
+              }
+            }
+            select {
+              font-family: Arial, Helvetica, sans-serif;
+
+              padding: 7px;
+              border: 3px solid gray;
+              border-radius: 25px;
+              width: 90px;
+              height: 35px;
+              option {
+                img {
+                  height: 15px;
+                }
               }
             }
           }
@@ -83,13 +104,19 @@ body {
         flex-direction: column;
         justify-content: space-between;
         padding: 240px 100px;
+        h1 {
+          font-size: 140px;
+          color: #ffd600;
+          font-weight: 600;
+          font-family: "BPG Phone Sans Bold Italic", sans-serif;
+        }
         h2 {
-          font-size: 240px;
-          font-family: Georgia, "Times New Roman", Times, serif;
+          font-size: 140px;
+          font-family: ;
           color: white;
           font-weight: 600;
         }
-        font-size: 170px;
+
         @include bestchoice;
         height: 810px;
         background-image: url(../images/janez-fabijan-VXzbVm24ap8-unsplash.jpg);

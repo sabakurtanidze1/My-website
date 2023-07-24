@@ -2,8 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import url("//cdn.web-fonts.ge/fonts/bpg-mikheil-stefane/css/bpg-mikheil-stefane.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mkhedruli-bold/css/bpg-nino-mkhedruli-bold.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-phone-sans-bold-italic/css/bpg-phone-sans-bold-italic.min.css");
 html,
 body,
 div,
@@ -166,10 +167,10 @@ body header section {
   align-items: center;
   z-index: 1;
   border-bottom: 2px solid black;
-  background-color: whitesmoke;
+  background-color: white;
   position: fixed;
   top: 0px;
-  padding: 35px 100px;
+  padding: 35px 80px;
   width: 100%;
   justify-content: space-between;
   display: flex;
@@ -190,24 +191,38 @@ body header section div .navigation {
 }
 body header section div .navigation ul {
   display: flex;
-  gap: 50px;
+  gap: 40px;
 }
 body header section div .navigation ul #active {
   color: gray;
 }
 body header section div .navigation ul .link {
-  width: 100px;
+  width: 140px;
   text-align: center;
   transition: transform, all ease-in-out 0.4s;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(32, 26, 26, 0.988);
-  font-family: "Noto Sans", sans-serif;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+body header section div .navigation ul .link i {
+  margin-right: 7px;
 }
 body header section div .navigation ul .link:hover {
   transform: translateY(-7px);
   border-bottom: 3px solid #5cace4;
   color: #5cace4;
+}
+body header section div .navigation ul select {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 7px;
+  border: 3px solid gray;
+  border-radius: 25px;
+  width: 90px;
+  height: 35px;
+}
+body header section div .navigation ul select option img {
+  height: 15px;
 }
 body main {
   margin-top: 20px;
@@ -218,18 +233,16 @@ body main .underheader .bg-Nature {
   flex-direction: column;
   justify-content: space-between;
   padding: 240px 100px;
-  font-size: 170px;
-  color: #ffc700;
-  font-family: "Great Vibes", cursive;
-  height: 810px;
-  background-image: url(../images/janez-fabijan-VXzbVm24ap8-unsplash.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+body main .underheader .bg-Nature h1 {
+  font-size: 140px;
+  color: #ffd600;
+  font-weight: 600;
+  font-family: "BPG Phone Sans Bold Italic", sans-serif;
 }
 body main .underheader .bg-Nature h2 {
-  font-size: 240px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 140px;
+  font-family: "BPG Phone Sans Bold Italic", sans-serif;
   color: white;
   font-weight: 600;
 }
