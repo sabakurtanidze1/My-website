@@ -144,12 +144,58 @@ a {
   box-sizing: border-box;
 }
 
-body main .destinations .tittle p {
+body main .seconddestinations .sec-tittle p, body main .destinations .tittle p {
   color: #fff;
   text-align: center;
   font-size: 26px;
   font-style: normal;
   line-height: normal;
+}
+
+body main .seconddestinations .sec-tittle, body main .destinations .tittle {
+  margin-bottom: 90px;
+  padding-top: 100px;
+  display: flex;
+  gap: 12px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body main .seconddestinations .sec-tittle h1, body main .destinations .tittle h1 {
+  color: #ffd600;
+  text-align: center;
+  font-family: "BPG Mikheil Stefane", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.8%;
+}
+
+body main .seconddestinations .sec-tittle h2, body main .destinations .tittle h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: lowercase;
+}
+
+body main .seconddestinations .sec-tittle p, body main .destinations .tittle p {
+  font-family: "BPG Mikheil Stefane", sans-serif;
+  width: 912px;
+  font-weight: 800;
+  color: #323535;
+}
+
+body main .seconddestinations .sec-tittle .amptysharp, body main .destinations .tittle div {
+  width: 50px;
+  height: 30px;
+  background-color: #abbaba;
+  border: 0px solid;
+  border-radius: 35px;
 }
 
 body {
@@ -216,7 +262,7 @@ body header section div .navigation ul select {
   padding: 7px;
   border: 3px solid gray;
   border-radius: 25px;
-  width: 90px;
+  width: 70px;
   height: 35px;
 }
 body header section div .navigation ul select option img {
@@ -299,49 +345,9 @@ body main .underheader .flex div p {
 }
 body main .destinations {
   height: 1010px;
+  margin-bottom: 300px;
   background: rgb(215, 220, 221);
   background: linear-gradient(180deg, rgb(215, 220, 221) 0%, rgb(230, 237, 236) 53%, rgb(245, 252, 255) 100%);
-}
-body main .destinations .tittle {
-  margin-bottom: 90px;
-  padding-top: 100px;
-  display: flex;
-  gap: 12px;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
-body main .destinations .tittle h1 {
-  color: #ffd600;
-  text-align: center;
-  font-family: "BPG Mikheil Stefane", sans-serif;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 82.8%;
-}
-body main .destinations .tittle h2 {
-  color: #fff;
-  text-align: center;
-  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: lowercase;
-}
-body main .destinations .tittle div {
-  width: 50px;
-  height: 30px;
-  background-color: #abbaba;
-  border: 0px solid;
-  border-radius: 35px;
-}
-body main .destinations .tittle p {
-  font-family: "BPG Mikheil Stefane", sans-serif;
-  width: 912px;
-  font-weight: 800;
-  color: #323535;
 }
 body main .destinations .locations {
   display: flex;
@@ -373,13 +379,99 @@ body main .destinations .locations .button:nth-child(4) .picture {
   background-size: cover;
 }
 body main .destinations .locations .picture {
-  border: 3px solid rgb(82, 81, 81);
   cursor: pointer;
-  width: 270px;
-  height: 450px;
+  width: 310px;
+  height: 553px;
+  border-radius: 10px;
   background-color: rgb(244, 31, 31);
   transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 374px;
+  gap: 10px;
 }
 body main .destinations .locations .picture:hover {
-  transform: translateY(-15px) scale(1.06);
+  transform: translateY(-15px) scale(1.02);
+}
+body main .destinations .locations .picture h1 {
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  font-size: 27px;
+  font-weight: 900;
+  color: whitesmoke;
+}
+body main .destinations .locations .picture p {
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: whitesmoke;
+}
+body main .seconddestinations {
+  margin-bottom: 100px;
+}
+body main .seconddestinations .sec-tittle h1 {
+  color: #ffea07;
+}
+body main .seconddestinations .sec-tittle h2 {
+  color: black;
+}
+body main .seconddestinations .sec-tittle .amptysharp {
+  background-color: #4e9617;
+}
+body main .grid {
+  display: flex;
+  justify-content: center;
+}
+body main .grid .gridconteiner {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+}
+body main .grid .gridconteiner .sec-photo {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ffea07;
+}
+body main .grid .gridconteiner .sec-photo h1 {
+  font-size: 100px;
+  text-align: center;
+}
+body main .grid .gridconteiner .sec-photo h2 {
+  font-size: 18px;
+}
+body main .grid .gridconteiner #first {
+  background-image: url(../images/green\ monaster.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 720px;
+  width: 342px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+body main .grid .gridconteiner #second {
+  background-image: url(../images/b8.jpg);
+  width: 459px;
+  height: 345px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .grid .gridconteiner #third {
+  background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
+  width: 459px;
+  height: 345px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .grid .gridconteiner #forths {
+  background-image: url(../images/b7.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 948px;
+  height: 345px;
+  grid-column-start: 2;
+  grid-column-end: 4;
 }/*# sourceMappingURL=global.css.map */

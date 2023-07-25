@@ -82,7 +82,7 @@ body {
               padding: 7px;
               border: 3px solid gray;
               border-radius: 25px;
-              width: 90px;
+              width: 70px;
               height: 35px;
               option {
                 img {
@@ -173,7 +173,7 @@ body {
     }
     .destinations {
       height: 1010px;
-
+      margin-bottom: 300px;
       background: rgb(215, 220, 221);
       background: linear-gradient(
         180deg,
@@ -183,46 +183,19 @@ body {
       );
 
       .tittle {
-        margin-bottom: 90px;
-        padding-top: 100px;
-        display: flex;
-        gap: 12px;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
+        @extend %tittle;
 
         h1 {
-          color: #ffd600;
-          text-align: center;
-          font-family: "BPG Mikheil Stefane", sans-serif;
-
-          font-size: 50px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 82.8%;
+          @extend %for-h1;
         }
         h2 {
-          color: #fff;
-          text-align: center;
-          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-          font-size: 80px;
-          font-style: normal;
-          font-weight: 900;
-          line-height: normal;
-          text-transform: lowercase;
+          @extend %for-h2;
         }
         div {
-          width: 50px;
-          height: 30px;
-          background-color: #abbaba;
-          border: 0px solid;
-          border-radius: 35px;
+          @extend %for-amptysharp;
         }
         p {
-          font-family: "BPG Mikheil Stefane", sans-serif;
-          width: 912px;
-          font-weight: 800;
-          color: #323535;
+          @extend %for-p;
           @extend %foralltext;
         }
       }
@@ -256,15 +229,117 @@ body {
         }
 
         .picture {
-          border: 3px solid rgb(82, 81, 81);
+          // border: 3px solid rgb(82, 81, 81);
           cursor: pointer;
-          width: 270px;
-          height: 450px;
+          width: 310px;
+          height: 553px;
+          border-radius: 10px;
+
           background-color: rgb(244, 31, 31);
           transition: transform 0.4s ease-in-out;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          padding-top: 374px;
+          gap: 10px;
+
+          &:hover {
+            transform: translateY(-15px) scale(1.02);
+          }
+          h1 {
+            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+            font-size: 27px;
+            font-weight: 900;
+            color: whitesmoke;
+
+            // text-align: center;
+          }
+          p {
+            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+            color: whitesmoke;
+          }
         }
-        .picture:hover {
-          transform: translateY(-15px) scale(1.06);
+      }
+    }
+    .seconddestinations {
+      margin-bottom: 100px;
+      .sec-tittle {
+        @extend %tittle;
+        h1 {
+          @extend %for-h1;
+          color: #ffea07;
+        }
+        h2 {
+          @extend %for-h2;
+          color: black;
+        }
+        .amptysharp {
+          @extend %for-amptysharp;
+          background-color: #4e9617;
+        }
+        p {
+          @extend %for-p;
+          @extend %foralltext;
+        }
+      }
+    }
+    .grid {
+      display: $display;
+      justify-content: center;
+      .gridconteiner {
+        display: grid;
+
+        gap: 30px;
+
+        grid-template-columns: auto auto auto;
+
+        // height: 710px;
+        // width: 1300px;
+        // background-color: #5cace4;
+
+        .sec-photo {
+          cursor: pointer;
+          border-radius: 10px;
+          background-color: #ffea07;
+
+          h1 {
+            font-size: 100px;
+            text-align: center;
+          }
+          h2 {
+            font-size: 18px;
+          }
+        }
+
+        #first {
+          background-image: url(../images/green\ monaster.jpg);
+          @include forpicture;
+          height: 720px;
+          width: 342px;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+        #second {
+          background-image: url(../images/b8.jpg);
+          width: 459px;
+          height: 345px;
+          @include forpicture;
+        }
+        #third {
+          background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
+          width: 459px;
+          height: 345px;
+          @include forpicture;
+        }
+        #forths {
+          background-image: url(../images/b7.jpg);
+          @include forpicture;
+          width: 948px;
+          height: 345px;
+          grid-column-start: 2;
+          grid-column-end: 4;
         }
       }
     }
