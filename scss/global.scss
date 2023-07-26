@@ -285,6 +285,8 @@ body {
       }
     }
     .grid {
+      // margin-bottom: 594px;
+      margin-bottom: 400px;
       display: $display;
       justify-content: center;
       .gridconteiner {
@@ -299,20 +301,30 @@ body {
         // background-color: #5cace4;
 
         .sec-photo {
+          display: flex;
+          justify-content: end;
+          flex-direction: column;
+          padding-bottom: 70px;
           cursor: pointer;
           border-radius: 10px;
           background-color: #ffea07;
 
           h1 {
-            font-size: 100px;
+            color: white;
+            font-size: 27px;
+            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
             text-align: center;
           }
           h2 {
+            color: white;
             font-size: 18px;
+            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+            text-align: center;
           }
         }
 
         #first {
+          padding-bottom: 200px;
           background-image: url(../images/romanov-palace-known-likani-located-600w-1475101799.webp);
           @include forpicture;
           height: 720px;
@@ -358,6 +370,49 @@ body {
           width: 459px;
           height: 345px;
           @include forpicture;
+        }
+      }
+    }
+    footer {
+      height: 400px;
+      width: 100%;
+      background-image: url(../images/footer2.png);
+      @include forpicture;
+
+      section {
+        padding-top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .ft-link {
+          padding-left: 77px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          h1 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(249, 219, 219);
+          }
+          a {
+            font-size: 18px;
+            color: #848481;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            transition: 0.5s;
+            &:hover {
+              color: #5cace4;
+            }
+          }
+        }
+        .icons {
+          padding-right: 232px;
+          padding-top: 60px;
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
         }
       }
     }
