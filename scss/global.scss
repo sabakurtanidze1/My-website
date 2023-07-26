@@ -277,7 +277,6 @@ body {
         }
         .amptysharp {
           @extend %for-amptysharp;
-          background-color: #4e9617;
         }
         p {
           @extend %for-p;
@@ -314,10 +313,10 @@ body {
         }
 
         #first {
-          background-image: url(../images/green\ monaster.jpg);
+          background-image: url(../images/romanov-palace-known-likani-located-600w-1475101799.webp);
           @include forpicture;
           height: 720px;
-          width: 342px;
+          // width: 342px;
           grid-row-start: 1;
           grid-row-end: 3;
         }
@@ -333,13 +332,32 @@ body {
           height: 345px;
           @include forpicture;
         }
-        #forths {
-          background-image: url(../images/b7.jpg);
+        #forth {
+          background-image: url(../images/კახის\ ტბა.jpg);
           @include forpicture;
+          // background-size: contain;
           width: 948px;
           height: 345px;
           grid-column-start: 2;
           grid-column-end: 4;
+        }
+        #fifth {
+          background-image: url(../images/b3.jpg);
+          width: 459px;
+          height: 345px;
+          @include forpicture;
+        }
+        #sixth {
+          background-image: url(../images/dji-0561-12.jpg);
+          width: 459px;
+          height: 345px;
+          @include forpicture;
+        }
+        #seventh {
+          background-image: url(../images/b6.jpg);
+          width: 459px;
+          height: 345px;
+          @include forpicture;
         }
       }
     }

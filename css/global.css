@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -415,9 +416,6 @@ body main .seconddestinations .sec-tittle h1 {
 body main .seconddestinations .sec-tittle h2 {
   color: black;
 }
-body main .seconddestinations .sec-tittle .amptysharp {
-  background-color: #4e9617;
-}
 body main .grid {
   display: flex;
   justify-content: center;
@@ -440,12 +438,11 @@ body main .grid .gridconteiner .sec-photo h2 {
   font-size: 18px;
 }
 body main .grid .gridconteiner #first {
-  background-image: url(../images/green\ monaster.jpg);
+  background-image: url(../images/romanov-palace-known-likani-located-600w-1475101799.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 720px;
-  width: 342px;
   grid-row-start: 1;
   grid-row-end: 3;
 }
@@ -465,8 +462,8 @@ body main .grid .gridconteiner #third {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .grid .gridconteiner #forths {
-  background-image: url(../images/b7.jpg);
+body main .grid .gridconteiner #forth {
+  background-image: url(../images/კახის\ ტბა.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -474,4 +471,28 @@ body main .grid .gridconteiner #forths {
   height: 345px;
   grid-column-start: 2;
   grid-column-end: 4;
+}
+body main .grid .gridconteiner #fifth {
+  background-image: url(../images/b3.jpg);
+  width: 459px;
+  height: 345px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .grid .gridconteiner #sixth {
+  background-image: url(../images/dji-0561-12.jpg);
+  width: 459px;
+  height: 345px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .grid .gridconteiner #seventh {
+  background-image: url(../images/b6.jpg);
+  width: 459px;
+  height: 345px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=global.css.map */
