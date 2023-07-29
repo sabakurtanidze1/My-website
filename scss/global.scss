@@ -13,13 +13,13 @@ body {
   height: 3800px;
   header {
     width: 100%;
-    height: 109px;
+
     section {
       opacity: 0.6;
       align-items: center;
       z-index: 1;
       border-bottom: 2px solid black;
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       position: fixed;
       top: 0px;
       padding: 35px 80px;
@@ -96,7 +96,6 @@ body {
     }
   }
   main {
-    margin-top: 20px;
     .underheader {
       .bg-Nature {
         position: relative;
@@ -121,8 +120,9 @@ body {
         }
       }
       .flex {
-        transform: translate(1100px, 439px);
         position: absolute;
+        top: 679px;
+        right: 60px;
         display: flex;
         gap: 40px;
         width: 300px;
@@ -172,8 +172,8 @@ body {
       }
     }
     .destinations {
-      height: 1010px;
-      margin-bottom: 300px;
+      height: 1210px;
+      margin-bottom: 100px;
       background: rgb(215, 220, 221);
       background: linear-gradient(
         180deg,
@@ -200,6 +200,8 @@ body {
         }
       }
       .locations {
+        height: 800px;
+        flex-wrap: wrap;
         @include flex;
         .button {
           &:nth-child(1) {
@@ -267,6 +269,7 @@ body {
       margin-bottom: 100px;
       .sec-tittle {
         @extend %tittle;
+
         h1 {
           @extend %for-h1;
           color: #ffea07;
@@ -285,11 +288,14 @@ body {
       }
     }
     .grid {
+      height: 1200px;
       // margin-bottom: 594px;
       margin-bottom: 400px;
       display: $display;
       justify-content: center;
       .gridconteiner {
+        padding: 0 50px;
+        width: 100%;
         display: grid;
 
         gap: 30px;
@@ -334,13 +340,13 @@ body {
         }
         #second {
           background-image: url(../images/b8.jpg);
-          width: 459px;
+          // width: 459px;
           height: 345px;
           @include forpicture;
         }
         #third {
           background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
-          width: 459px;
+          // width: 459px;
           height: 345px;
           @include forpicture;
         }
@@ -348,26 +354,26 @@ body {
           background-image: url(../images/კახის\ ტბა.jpg);
           @include forpicture;
           // background-size: contain;
-          width: 948px;
+          // width: 948px;
           height: 345px;
           grid-column-start: 2;
           grid-column-end: 4;
         }
         #fifth {
           background-image: url(../images/b3.jpg);
-          width: 459px;
+          // width: 459px;
           height: 345px;
           @include forpicture;
         }
         #sixth {
           background-image: url(../images/dji-0561-12.jpg);
-          width: 459px;
+          // width: 459px;
           height: 345px;
           @include forpicture;
         }
         #seventh {
           background-image: url(../images/b6.jpg);
-          width: 459px;
+          // width: 459px;
           height: 345px;
           @include forpicture;
         }

@@ -205,14 +205,13 @@ body {
 }
 body header {
   width: 100%;
-  height: 109px;
 }
 body header section {
   opacity: 0.6;
   align-items: center;
   z-index: 1;
   border-bottom: 2px solid black;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0px;
   padding: 35px 80px;
@@ -269,9 +268,6 @@ body header section div .navigation ul select {
 body header section div .navigation ul select option img {
   height: 15px;
 }
-body main {
-  margin-top: 20px;
-}
 body main .underheader .bg-Nature {
   position: relative;
   display: flex;
@@ -297,8 +293,9 @@ body main .underheader .bg-Nature h2 {
   font-weight: 600;
 }
 body main .underheader .flex {
-  transform: translate(1100px, 439px);
   position: absolute;
+  top: 679px;
+  right: 60px;
   display: flex;
   gap: 40px;
   width: 300px;
@@ -345,12 +342,14 @@ body main .underheader .flex div p {
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
 body main .destinations {
-  height: 1010px;
-  margin-bottom: 300px;
+  height: 1210px;
+  margin-bottom: 100px;
   background: rgb(215, 220, 221);
   background: linear-gradient(180deg, rgb(215, 220, 221) 0%, rgb(230, 237, 236) 53%, rgb(245, 252, 255) 100%);
 }
 body main .destinations .locations {
+  height: 800px;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -417,11 +416,14 @@ body main .seconddestinations .sec-tittle h2 {
   color: black;
 }
 body main .grid {
+  height: 1200px;
   margin-bottom: 400px;
   display: flex;
   justify-content: center;
 }
 body main .grid .gridconteiner {
+  padding: 0 50px;
+  width: 100%;
   display: grid;
   gap: 30px;
   grid-template-columns: auto auto auto;
@@ -459,7 +461,6 @@ body main .grid .gridconteiner #first {
 }
 body main .grid .gridconteiner #second {
   background-image: url(../images/b8.jpg);
-  width: 459px;
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
@@ -467,7 +468,6 @@ body main .grid .gridconteiner #second {
 }
 body main .grid .gridconteiner #third {
   background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
-  width: 459px;
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
@@ -478,14 +478,12 @@ body main .grid .gridconteiner #forth {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 948px;
   height: 345px;
   grid-column-start: 2;
   grid-column-end: 4;
 }
 body main .grid .gridconteiner #fifth {
   background-image: url(../images/b3.jpg);
-  width: 459px;
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
@@ -493,7 +491,6 @@ body main .grid .gridconteiner #fifth {
 }
 body main .grid .gridconteiner #sixth {
   background-image: url(../images/dji-0561-12.jpg);
-  width: 459px;
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
@@ -501,7 +498,6 @@ body main .grid .gridconteiner #sixth {
 }
 body main .grid .gridconteiner #seventh {
   background-image: url(../images/b6.jpg);
-  width: 459px;
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
