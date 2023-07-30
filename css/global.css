@@ -546,4 +546,159 @@ body main footer section .icons {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.servicesweb {
+  height: 1000px;
+}
+.servicesweb main {
+  padding-top: 129px;
+}
+.servicesweb main .bg-likani {
+  background-image: url(../images/Crowne_Plaza_BORJOMI-Borjomi-Aussenansicht-5-766111.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #848481;
+  height: 612px;
+  width: 90%;
+}
+.servicesweb main .bg-likani div {
+  display: flex;
+  padding-top: 150px;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  height: 300px;
+  width: 60%;
+}
+.servicesweb main .bg-likani div h1 {
+  color: aliceblue;
+  font-size: 100px;
+  font-weight: 500;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+.servicesweb main .bg-likani div h2 {
+  font-size: 25px;
+  color: aliceblue;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+.servicesweb main .offers {
+  height: 1600px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 330px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 50px;
+}
+.servicesweb main .offers section div a {
+  font-size: 22px;
+  font-weight: 900;
+  color: #000000;
+  font-family: "BPG Mikheil Stefane", sans-serif;
+  cursor: pointer;
+}
+.servicesweb main .offers section div a:hover {
+  color: green;
+  border-bottom: 3px solid green;
+}
+.servicesweb main .offers section .about {
+  height: 1150px;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.servicesweb main .offers section .about p {
+  width: 647px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #323535;
+}
+.servicesweb main .offers h1 {
+  font-size: 25px;
+  color: #207006;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+.servicesweb main .offers .conteiner-of-photo {
+  margin-top: 60px;
+  width: 647px;
+  display: flex;
+  justify-content: space-between;
+}
+.servicesweb main .offers .conteiner-of-photo:nth-child(1) .photos {
+  background-image: url(../images/);
+}
+.servicesweb main .offers .conteiner-of-photo:nth-child(2) .photos {
+  background-image: url(../images/);
+}
+.servicesweb main .offers .conteiner-of-photo:nth-child(3) .photos {
+  background-image: url(../images/);
+}
+.servicesweb main .offers .conteiner-of-photo .photos {
+  height: 194px;
+  width: 194px;
+  border-radius: 20px;
+  background-color: #ffea07;
+}
+.servicesweb main .offers .weather .discribe {
+  width: 504px;
+  height: 132px;
+  background-color: #207006;
+  border-radius: 10px;
+  border: 1px solid #2c2929;
+}
+.servicesweb main .barg {
+  position: relative;
+  align-items: center;
+  padding: 0 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin: 0 auto;
+  height: 133px;
+  width: 90%;
+  background-color: #7f731a;
+}
+.servicesweb main .barg div img {
+  position: absolute;
+  top: -50px;
+}
+.servicesweb main .barg div h1 {
+  margin-bottom: 12px;
+  font-size: 35px;
+  font-weight: 800;
+  color: white;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+.servicesweb main .barg div p {
+  font-size: 20px;
+  color: white;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+.servicesweb main .barg div button {
+  cursor: pointer;
+  display: flex;
+  padding: 11px 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #7f731a;
+  font-weight: 800;
+  border-radius: 4px;
+  border: none;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  height: 42px;
+  width: 144px;
+}
+.servicesweb main footer {
+  margin-top: 400px;
 }/*# sourceMappingURL=global.css.map */

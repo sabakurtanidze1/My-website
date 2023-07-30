@@ -424,3 +424,183 @@ body {
     }
   }
 }
+
+.servicesweb {
+  height: 1000px;
+  main {
+    padding-top: 129px;
+
+    .bg-likani {
+      background-image: url(../images/Crowne_Plaza_BORJOMI-Borjomi-Aussenansicht-5-766111.jpg);
+      @include forpicture;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      background-color: #848481;
+      height: 612px;
+      width: 90%;
+      div {
+        display: flex;
+        padding-top: 150px;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        height: 300px;
+        width: 60%;
+        h1 {
+          color: aliceblue;
+          font-size: 100px;
+          font-weight: 500;
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+        }
+        h2 {
+          font-size: 25px;
+          color: aliceblue;
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+        }
+      }
+    }
+
+    .offers {
+     height: 1600px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 330px;
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-top:50px ;
+      section {
+        div {
+         
+          a {
+            font-size: 22px;
+            font-weight: 900;
+            color: #000000;
+            font-family: "BPG Mikheil Stefane", sans-serif;
+
+            cursor: pointer;
+            &:hover {
+              color: green;
+              border-bottom: 3px solid green;
+              // text-decoration: underline;
+            }
+          }
+        }
+        .about {
+          height: 1150px;
+          justify-content: space-around;
+          display: flex;
+          flex-direction: column;
+          p {
+            width: 647px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #323535;
+          }
+        }
+      }
+      h1 {
+        font-size: 25px;
+        color: #207006;
+        font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+      }
+      .conteiner-of-photo {
+        &:nth-child(1) {
+          .photos {
+            background-image: url(../images/);
+          }
+        }
+        &:nth-child(2) {
+          .photos {
+            background-image: url(../images/);
+          }
+        }
+        &:nth-child(3) {
+          .photos {
+            background-image: url(../images/);
+          }
+        }
+        margin-top: 60px;
+        width: 647px;
+        display: flex;
+        justify-content: space-between;
+        .photos {
+          height: 194px;
+          width: 194px;
+          border-radius: 20px;
+          background-color: #ffea07;
+        }
+      }
+
+      .weather {
+        .discribe {
+          width: 504px;
+          height: 132px;
+background-color: #207006;
+          border-radius: 10px;
+          border: 1px solid #2c2929;
+          
+        }
+      }
+    }
+    .barg {
+      position: relative;
+      align-items: center;
+      padding: 0 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin: 0 auto;
+      height: 133px;
+      width: 90%;
+      background-color: #7f731a;
+      div {
+        img {
+          position: absolute;
+          top: -50px;
+        }
+      }
+      div {
+        h1 {
+          margin-bottom: 12px;
+          font-size: 35px;
+          font-weight: 800;
+          color: white;
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+        }
+        p {
+          font-size: 20px;
+
+          color: white;
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+        }
+      }
+      div {
+        button {
+          cursor: pointer;
+          display: flex;
+          padding: 11px 25px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          color: #7f731a;
+          font-weight: 800;
+          border-radius: 4px;
+          border: none;
+          background: #fff;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+          height: 42px;
+          width: 144px;
+        }
+      }
+    }
+    footer {
+      margin-top: 400px;
+    }
+  }
+}
