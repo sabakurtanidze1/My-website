@@ -223,19 +223,21 @@ body header section:hover {
   opacity: 1;
 }
 body header section .logo {
-  display: flex;
-  gap: 30px;
+  width: 120px;
 }
 body header section .logo img {
   height: 40px;
+}
+body header section div {
+  width: 70%;
 }
 body header section div .navigation {
   height: 40px;
   margin-top: 17px;
 }
 body header section div .navigation ul {
+  justify-content: space-between;
   display: flex;
-  gap: 40px;
 }
 body header section div .navigation ul #active {
   color: gray;
@@ -554,7 +556,13 @@ body main footer section .icons {
 .servicesweb main {
   padding-top: 129px;
 }
-.servicesweb main .bg-likani {
+.servicesweb main #bg-color {
+  width: 100%;
+  height: 612px;
+  background: rgb(152, 150, 143);
+  background: linear-gradient(180deg, rgb(189, 188, 185) 0%, rgb(200, 200, 196) 36%, rgb(253, 254, 245) 100%);
+}
+.servicesweb main #bg-color .bg-likani {
   background-image: url(../images/Crowne_Plaza_BORJOMI-Borjomi-Aussenansicht-5-766111.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -568,7 +576,7 @@ body main footer section .icons {
   height: 612px;
   width: 90%;
 }
-.servicesweb main .bg-likani div {
+.servicesweb main #bg-color .bg-likani div {
   display: flex;
   padding-top: 150px;
   align-items: center;
@@ -577,83 +585,251 @@ body main footer section .icons {
   height: 300px;
   width: 60%;
 }
-.servicesweb main .bg-likani div h1 {
+.servicesweb main #bg-color .bg-likani div h1 {
   color: aliceblue;
   font-size: 100px;
   font-weight: 500;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
-.servicesweb main .bg-likani div h2 {
+.servicesweb main #bg-color .bg-likani div h2 {
   font-size: 25px;
   color: aliceblue;
-  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  font-family: "BPG Ni no Mkhedruli Bold", sans-serif;
 }
-.servicesweb main .offers {
-  height: 1600px;
+.servicesweb main .offers-conteiner {
+  width: 100%;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 330px;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 50px;
+  margin-bottom: 100px;
+  padding: 58px 70px;
 }
-.servicesweb main .offers section div a {
+.servicesweb main .offers-conteiner .offers {
+  height: 1500px;
+  width: 647px;
+}
+.servicesweb main .offers-conteiner .offers .nav {
+  width: 647px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.servicesweb main .offers-conteiner .offers .nav a {
   font-size: 22px;
   font-weight: 900;
   color: #000000;
   font-family: "BPG Mikheil Stefane", sans-serif;
   cursor: pointer;
 }
-.servicesweb main .offers section div a:hover {
+.servicesweb main .offers-conteiner .offers .nav a:hover {
   color: green;
   border-bottom: 3px solid green;
 }
-.servicesweb main .offers section .about {
-  height: 1150px;
+.servicesweb main .offers-conteiner .offers .about {
+  height: 1000px;
   justify-content: space-around;
   display: flex;
   flex-direction: column;
 }
-.servicesweb main .offers section .about p {
+.servicesweb main .offers-conteiner .offers .about p {
+  font-family: "BPG Ni no Mkhedruli Bold", sans-serif;
   width: 647px;
   font-size: 18px;
   font-weight: 700;
-  color: #323535;
+  color: #6c7070;
 }
-.servicesweb main .offers h1 {
+.servicesweb main .offers-conteiner .attention {
+  margin-top: 50px;
   font-size: 25px;
   color: #207006;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
-.servicesweb main .offers .conteiner-of-photo {
-  margin-top: 60px;
+.servicesweb main .offers-conteiner .conteiner-of-photo {
+  height: 200px;
   width: 647px;
+  margin-top: 60px;
   display: flex;
   justify-content: space-between;
 }
-.servicesweb main .offers .conteiner-of-photo:nth-child(1) .photos {
-  background-image: url(../images/);
-}
-.servicesweb main .offers .conteiner-of-photo:nth-child(2) .photos {
-  background-image: url(../images/);
-}
-.servicesweb main .offers .conteiner-of-photo:nth-child(3) .photos {
-  background-image: url(../images/);
-}
-.servicesweb main .offers .conteiner-of-photo .photos {
+.servicesweb main .offers-conteiner .conteiner-of-photo .photos {
   height: 194px;
   width: 194px;
   border-radius: 20px;
   background-color: #ffea07;
 }
-.servicesweb main .offers .weather .discribe {
+.servicesweb main .offers-conteiner .conteiner-of-photo #pirveli {
+  background-image: url(../images/Borjomi-7.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.servicesweb main .offers-conteiner .conteiner-of-photo #meore {
+  background-image: url(../images/sulfur-pools.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.servicesweb main .offers-conteiner .conteiner-of-photo #mesame {
+  background-image: url(../images/dji-0440-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.servicesweb main .weather {
+  width: 504px;
+}
+.servicesweb main .weather .describe-conteiner {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
   width: 504px;
   height: 132px;
-  background-color: #207006;
   border-radius: 10px;
-  border: 1px solid #2c2929;
+  border: 2px solid #e5e5e5;
 }
-.servicesweb main .barg {
+.servicesweb main .weather .describe-conteiner .describe {
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  height: 85px;
+  width: 190px;
+}
+.servicesweb main .weather .describe-conteiner .describe:nth-child(1) {
+  border-right: 2px solid #e5e5e5;
+}
+.servicesweb main .weather .describe-conteiner .describe:nth-child(2) {
+  border-right: 2px solid #e5e5e5;
+}
+.servicesweb main .weather .describe-conteiner .describe .des-tittle {
+  font-size: 17px;
+  padding-left: 40px;
+  font-weight: 600;
+  color: #565656;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+.servicesweb main .weather .describe-conteiner .describe .sun {
+  gap: 10px;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.servicesweb main .weather .describe-conteiner .describe .sun div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.servicesweb main .weather .describe-conteiner .describe .Safety {
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  height: 50px;
+  align-items: center;
+  padding-left: 40px;
+  display: flex;
+  gap: 16px;
+}
+.servicesweb main .weather .describe-conteiner .describe .Safety img {
+  width: 17.999px;
+  height: 17.999px;
+}
+.servicesweb main .weather .describe-conteiner .describe .population {
+  height: 70px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 16.5px;
+}
+.servicesweb main .weather .describe-conteiner .describe .population img {
+  height: 18.13px;
+  width: 18.13px;
+}
+.servicesweb main .weather .describe-conteiner .describe .population img .numbers .quantity {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.servicesweb main .weather .potoebi {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.servicesweb main .weather .potoebi div:nth-child(1) {
+  background-image: url(../images/exterior.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 504px;
+  height: 194px;
+  flex-shrink: 0;
+  background-color: #000000;
+}
+.servicesweb main .weather .potoebi div:nth-child(2) {
+  background-image: url(../images/352505258_709995150928263_8921581682695330735_n.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 247px;
+  height: 194px;
+  flex-shrink: 0;
+}
+.servicesweb main .weather .potoebi div:nth-child(3) {
+  background-image: url(../images/89291351.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: #000000;
+  width: 247px;
+  height: 194px;
+  flex-shrink: 0;
+}
+.servicesweb main .weather .cost-conteiner h1 {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  color: rgb(59, 45, 45);
+}
+.servicesweb main .weather .cost-conteiner h2 {
+  margin-bottom: 12px;
+}
+.servicesweb main .weather .cost-conteiner p {
+  width: 90px;
+  font-size: 13px;
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  color: #454040;
+}
+.servicesweb main .weather .cost-conteiner .cost {
+  padding: 29px 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  margin-top: 17px;
+  width: 504px;
+  height: 176px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 2px solid #e5e5e5;
+}
+.servicesweb main .weather .cost-conteiner .cost .cost-boxs {
+  width: 110px;
+  height: 130px;
+}
+.servicesweb main .weather .cost-conteiner .cost .cost-boxs:nth-child(1) {
+  border-right: 2px solid #e5e5e5;
+}
+.servicesweb main .weather .cost-conteiner .cost .cost-boxs:nth-child(2) {
+  border-right: 2px solid #e5e5e5;
+}
+.servicesweb main .weather .cost-conteiner .cost .cost-boxs:nth-child(3) {
+  border-right: 2px solid #e5e5e5;
+}
+.servicesweb .barg {
   position: relative;
   align-items: center;
   padding: 0 70px;
@@ -666,23 +842,23 @@ body main footer section .icons {
   width: 90%;
   background-color: #7f731a;
 }
-.servicesweb main .barg div img {
+.servicesweb .barg div img {
   position: absolute;
   top: -50px;
 }
-.servicesweb main .barg div h1 {
+.servicesweb .barg div h1 {
   margin-bottom: 12px;
   font-size: 35px;
   font-weight: 800;
   color: white;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
-.servicesweb main .barg div p {
+.servicesweb .barg div p {
   font-size: 20px;
   color: white;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
-.servicesweb main .barg div button {
+.servicesweb .barg div button {
   cursor: pointer;
   display: flex;
   padding: 11px 25px;
@@ -699,6 +875,6 @@ body main footer section .icons {
   height: 42px;
   width: 144px;
 }
-.servicesweb main footer {
-  margin-top: 400px;
+.servicesweb footer {
+  margin-top: 290px;
 }/*# sourceMappingURL=global.css.map */
