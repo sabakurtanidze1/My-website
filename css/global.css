@@ -559,8 +559,6 @@ body main footer section .icons {
 .servicesweb main #bg-color {
   width: 100%;
   height: 612px;
-  background: rgb(152, 150, 143);
-  background: linear-gradient(180deg, rgb(189, 188, 185) 0%, rgb(200, 200, 196) 36%, rgb(253, 254, 245) 100%);
 }
 .servicesweb main #bg-color .bg-likani {
   background-image: url(../images/Crowne_Plaza_BORJOMI-Borjomi-Aussenansicht-5-766111.jpg);
@@ -618,7 +616,7 @@ body main footer section .icons {
   font-size: 22px;
   font-weight: 900;
   color: #000000;
-  font-family: "BPG Mikheil Stefane", sans-serif;
+  font-family: "BPG Nino Mkhedruli Bold";
   cursor: pointer;
 }
 .servicesweb main .offers-conteiner .offers .nav a:hover {
@@ -632,9 +630,9 @@ body main footer section .icons {
   flex-direction: column;
 }
 .servicesweb main .offers-conteiner .offers .about p {
-  font-family: "BPG Ni no Mkhedruli Bold", sans-serif;
+  font-family: "BPG Nino Mkhedruli Bold";
   width: 647px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: #6c7070;
 }
@@ -840,7 +838,7 @@ body main footer section .icons {
   margin: 0 auto;
   height: 133px;
   width: 90%;
-  background-color: #7f731a;
+  background-color: #527f1a;
 }
 .servicesweb .barg div img {
   position: absolute;
@@ -877,4 +875,195 @@ body main footer section .icons {
 }
 .servicesweb footer {
   margin-top: 290px;
+}
+
+.contacts-body {
+  height: 1000px;
+}
+.contacts-body main .contact {
+  position: relative;
+  display: flex;
+  padding: 170px 100px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+  background-color: #6ba80b;
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: animateBg 5s linear infinite;
+}
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.contacts-body main .contact .content {
+  font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+  max-width: 800px;
+  text-align: center;
+}
+.contacts-body main .contact .content h2 {
+  margin-bottom: 25px;
+  font-size: 46px;
+  color: #fff;
+  font-weight: 500;
+}
+.contacts-body main .contact .content p {
+  color: #fff;
+  font-weight: 300;
+}
+.contacts-body main .contact .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.contacts-body main .contact .container .contactInfo {
+  justify-content: space-evenly;
+  padding: 60px 90px;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+}
+.contacts-body main .contact .container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.contacts-body main .contact .container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.contacts-body main .contact .container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+}
+.contacts-body main .contact .container .contactInfo .box .text h3 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #00bcd4;
+  font-size: 22px;
+  font-weight: 800;
+}
+.contacts-body main .contact .container .login-box {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.contacts-body main .contact .container .login-box form h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+.contacts-body main .contact .container .login-box form .input-box {
+  position: relative;
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 2px solid #fff;
+}
+.contacts-body main .contact .container .login-box form .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.contacts-body main .contact .container .login-box form .input-box input {
+  padding: 0 35px 0 5px;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+}
+.contacts-body main .contact .container .login-box form .input-box input:focus ~ label,
+.contacts-body main .contact .container .login-box form .input-box input:valid ~ label {
+  top: -5px;
+}
+.contacts-body main .contact .container .login-box form .input-box .sec-icon {
+  font-size: 1.2em;
+  position: absolute;
+  color: #fff;
+  right: 8px;
+  line-height: 57px;
+}
+.contacts-body main .contact .container .login-box form .remember-forgot {
+  font-size: 0.9em;
+  color: #fff;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-body main .contact .container .login-box form .remember-forgot label input {
+  margin-right: 3px;
+}
+.contacts-body main .contact .container .login-box form .remember-forgot a {
+  color: #fff;
+}
+.contacts-body main .contact .container .login-box form .remember-forgot a:hover {
+  text-decoration: underline;
+}
+.contacts-body main .contact .container .login-box form button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.contacts-body main .contact .container .login-box form .register-link {
+  text-align: center;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 25px 0 10px;
+}
+.contacts-body main .contact .container .login-box form .register-link p {
+  font-weight: 600;
+  color: #fff;
+}
+.contacts-body main .contact .container .login-box form .register-link a {
+  font-weight: 600;
+  color: #fff;
+}
+.contacts-body main .contact .container .login-box form .register-link a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=global.css.map */

@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="contacts-body">
     <header>
       <section class="header">
         <div class="logo">
@@ -43,7 +43,7 @@
               <!-- <a href="../index.html" class="link">
                 <i class="fa-solid fa-bell" style="color: #424f67"></i
                 >სიახლეები</a -->
-              
+
               <a href="../pages/contacts.html" class="link">
                 <i class="fa-solid fa-phone fa-shake" style="color: #434a56"></i
                 >კონტაქტები</a
@@ -65,75 +65,128 @@
       </section>
     </header>
     <main>
-        <section>
-            <div>
-                <h1></h1>
-                <p></p>
-                <p></p>
+      <section class="contact">
+        <div class="content">
+          <h2>დაგვიკავშირდით ჩვენ.</h2>
+          <p>
+            ქვემოთ მოცემულია მისამართი ნომერი და ემაილი სადაც შეგიძლიათ რომ
+            დაგვიკავშირდით მოგვწეროთ და დამატებით ინფორმაციის შემთხვევაში ჩვენ
+            დაგეხმარებით, ამისთვის აუცილებელია ქვემოთ მოცემულ სარეგრისტრაციო
+            ველი შეავსოთ , შეიყვანეთ თქვენი მონაცემები.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="contactInfo">
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="text">
+                <h3>მისამართი</h3>
+                <p>ბორჯომი</p>
+              </div>
             </div>
-        </section>
-        <section>
+
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="text">
+                <h3>ტელეფონის ნომერი</h3>
+                <p>595-905-209</p>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="text">
+                <h3>ემაილი</h3>
+                <p>Borjomi243@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="login-box">
             <form action="">
-                <input type="text">
-                <label for=""></label>
+              <h2>Login</h2>
+              <div class="input-box">
+                <span class="sec-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <input type="email" required />
+                <label for="email">Email</label>
+              </div>
 
-                <input type="text">
-                <label for=""></label>
-                
-                <p><span><a href=""></a></span></p>
+              <div class="input-box">
+                <span class="sec-icon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" required />
+                <label for="password">Password</label>
+              </div>
 
-                <input type="text">
-                <label for=""></label>
-
+              <div class="remember-forgot">
+                <label><input type="checkbox" />Remember me</label>
+                <a href="#">Forgot Password?</a>
+              </div>
+              <button type="submit">Login</button>
+              <div class="register-link">
+                <p>Don't have an accaunt?<a href="#">Register</a></p>
+              </div>
             </form>
-        </section>
-        <section>
-            <div></div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <footer>
-            <section>
-              <div class="ft-link">
-                <h1>Legal</h1>
-                <a href="">MSA Self Managed</a>
-                <a href="">Privacy</a>
-                <a href="">GDPR</a>
-                <a href="">Guidelines for Law Enforcement</a>
-                <a href="">Terms of Service</a>
-                <a href="">Manage Cookies</a>
-              </div>
-              <div class="ft-link">
-                <h1>Product</h1>
-                <a href="../index.html">Home</a>
-                <a href="../pages/aboutuse.html">About Use</a>
-                <a href="../pages/services.html">Services</a>
-                <!-- <a href="#seconddestinations">News</a> -->
-                <a href="../pages/contacts.html" >Contacts</a>
-                
-              </div>
-              <div class="ft-link">
-                <h1>company</h1>
-                <a href="">Team</a>
-                
-                <a href="">Jobs </a>
-                <a href="">Partners</a>
-                <a href="">Press</a>
-                <a href="">Blog</a>
-                <a href="">Newsletter</a>
-              </div>
-              <div class="icons">
-                <a href="https://www.facebook.com/tvborjomi"
-                  ><i class="fa-brands fa-facebook fa-2xl" style="color: #0055ff;"></i>
-                <a href="https://www.instagram.com/borjomilikani/"
-                  ><i class="fa-brands fa-instagram fa-2xl" style="color: #ff006f;"></i>
-                </a>
-                <a href=""
-                  ><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i>
-                </a>
-             <a href="https://www.youtube.com/watch?v=KN2udvzr5Xo"><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></i></a>
-              </div>
-            </section>
-          </footer>
+      <footer>
+        <section>
+          <div class="ft-link">
+            <h1>Legal</h1>
+            <a href="">MSA Self Managed</a>
+            <a href="">Privacy</a>
+            <a href="">GDPR</a>
+            <a href="">Guidelines for Law Enforcement</a>
+            <a href="">Terms of Service</a>
+            <a href="">Manage Cookies</a>
+          </div>
+          <div class="ft-link">
+            <h1>Product</h1>
+            <a href="../index.html">Home</a>
+            <a href="../pages/aboutuse.html">About Use</a>
+            <a href="../pages/services.html">Services</a>
+            <!-- <a href="#seconddestinations">News</a> -->
+            <a href="../pages/contacts.html">Contacts</a>
+          </div>
+          <div class="ft-link">
+            <h1>company</h1>
+            <a href="">Team</a>
+
+            <a href="">Jobs </a>
+            <a href="">Partners</a>
+            <a href="">Press</a>
+            <a href="">Blog</a>
+            <a href="">Newsletter</a>
+          </div>
+          <div class="icons">
+            <a href="https://www.facebook.com/tvborjomi"
+              ><i
+                class="fa-brands fa-facebook fa-2xl"
+                style="color: #0055ff"
+              ></i>
+            </a>
+            <a href="https://www.instagram.com/borjomilikani/"
+              ><i
+                class="fa-brands fa-instagram fa-2xl"
+                style="color: #ff006f"
+              ></i>
+            </a>
+
+            <a href=""
+              ><i class="fa-brands fa-github fa-2xl" style="color: #000000"></i>
+            </a>
+            <a href="https://www.youtube.com/watch?v=KN2udvzr5Xo"
+              ><i class="fa-brands fa-youtube fa-2xl" style="color: #ff0000"></i
+            ></a>
+          </div>
+        </section>
+      </footer>
     </main>
   </body>
 </html>
