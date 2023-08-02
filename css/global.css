@@ -206,7 +206,7 @@ body {
 body header {
   width: 100%;
 }
-body header section {
+body header .header {
   opacity: 0.6;
   align-items: center;
   z-index: 1;
@@ -219,30 +219,46 @@ body header section {
   justify-content: space-between;
   display: flex;
 }
-body header section:hover {
+@media (max-width: 1024px) {
+  body header .header {
+    padding: 35px 19px;
+  }
+}
+body header .header:hover {
   opacity: 1;
 }
-body header section .logo {
+body header .header .logo {
   width: 120px;
 }
-body header section .logo img {
+body header .header .logo img {
   height: 40px;
 }
-body header section div {
+@media (max-width: 1024px) {
+  body header .header .logo img {
+    height: 35px;
+    width: 100px;
+  }
+}
+body header .header div {
   width: 70%;
 }
-body header section div .navigation {
+@media (max-width: 1024px) {
+  body header .header div {
+    width: 80%;
+  }
+}
+body header .header div .navigation {
   height: 40px;
   margin-top: 17px;
 }
-body header section div .navigation ul {
+body header .header div .navigation ul {
   justify-content: space-between;
   display: flex;
 }
-body header section div .navigation ul #active {
+body header .header div .navigation ul #active {
   color: gray;
 }
-body header section div .navigation ul .link {
+body header .header div .navigation ul .link {
   width: 140px;
   text-align: center;
   transition: transform, all ease-in-out 0.4s;
@@ -251,15 +267,26 @@ body header section div .navigation ul .link {
   color: rgba(32, 26, 26, 0.988);
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
-body header section div .navigation ul .link i {
+@media (max-width: 1024px) {
+  body header .header div .navigation ul .link {
+    font-size: 18px;
+    height: 28px;
+  }
+}
+body header .header div .navigation ul .link i {
   margin-right: 7px;
 }
-body header section div .navigation ul .link:hover {
+@media (max-width: 1024px) {
+  body header .header div .navigation ul .link i {
+    margin-right: 4px;
+  }
+}
+body header .header div .navigation ul .link:hover {
   transform: translateY(-7px);
   border-bottom: 3px solid #5cace4;
   color: #5cace4;
 }
-body header section div .navigation ul select {
+body header .header div .navigation ul select {
   font-family: Arial, Helvetica, sans-serif;
   padding: 7px;
   border: 3px solid gray;
@@ -267,7 +294,14 @@ body header section div .navigation ul select {
   width: 70px;
   height: 35px;
 }
-body header section div .navigation ul select option img {
+@media (max-width: 1024px) {
+  body header .header div .navigation ul select {
+    width: 60px;
+    padding: 0;
+    font-size: 15px;
+  }
+}
+body header .header div .navigation ul select option img {
   height: 15px;
 }
 body main .underheader .bg-Nature {
@@ -282,11 +316,21 @@ body main .underheader .bg-Nature {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 1024px) {
+  body main .underheader .bg-Nature {
+    justify-content: space-evenly;
+  }
+}
 body main .underheader .bg-Nature h1 {
   font-size: 100px;
   font-family: "BPG Mikheil Stefane", sans-serif;
   color: #ffc700;
   font-weight: 600;
+}
+@media (max-width: 1024px) {
+  body main .underheader .bg-Nature h1 {
+    font-size: 70px;
+  }
 }
 body main .underheader .bg-Nature h2 {
   font-size: 140px;
@@ -294,9 +338,14 @@ body main .underheader .bg-Nature h2 {
   color: white;
   font-weight: 600;
 }
+@media (max-width: 1024px) {
+  body main .underheader .bg-Nature h2 {
+    font-size: 100px;
+  }
+}
 body main .underheader .flex {
   position: absolute;
-  top: 679px;
+  top: 649px;
   right: 60px;
   display: flex;
   gap: 40px;
@@ -349,12 +398,29 @@ body main .destinations {
   background: rgb(215, 220, 221);
   background: linear-gradient(180deg, rgb(215, 220, 221) 0%, rgb(230, 237, 236) 53%, rgb(245, 252, 255) 100%);
 }
+@media (max-width: 1024px) {
+  body main .destinations {
+    height: 1710px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1024px) {
+  body main .destinations .tittle p {
+    width: 712px;
+  }
+}
 body main .destinations .locations {
   height: 800px;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+@media (max-width: 1024px) {
+  body main .destinations .locations {
+    height: 1190px;
+    justify-content: space-around;
+  }
 }
 body main .destinations .locations .button:nth-child(1) .picture {
   background-image: url(../images/borjomi1.jpg);
@@ -393,6 +459,12 @@ body main .destinations .locations .picture {
   padding-top: 374px;
   gap: 10px;
 }
+@media (max-width: 1024px) {
+  body main .destinations .locations .picture {
+    width: 340px;
+    height: 500px;
+  }
+}
 body main .destinations .locations .picture:hover {
   transform: translateY(-15px) scale(1.02);
 }
@@ -417,6 +489,11 @@ body main .seconddestinations .sec-tittle h1 {
 body main .seconddestinations .sec-tittle h2 {
   color: black;
 }
+@media (max-width: 1024px) {
+  body main .seconddestinations .sec-tittle p {
+    width: 712px;
+  }
+}
 body main .grid {
   height: 1200px;
   margin-bottom: 400px;
@@ -430,6 +507,18 @@ body main .grid .gridconteiner {
   gap: 30px;
   grid-template-columns: auto auto auto;
 }
+@media (max-width: 1024px) {
+  body main .grid .gridconteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 780px) {
+  body main .grid .gridconteiner {
+    padding: 0 10px;
+  }
+}
 body main .grid .gridconteiner .sec-photo {
   display: flex;
   justify-content: end;
@@ -438,6 +527,16 @@ body main .grid .gridconteiner .sec-photo {
   cursor: pointer;
   border-radius: 10px;
   background-color: #ffea07;
+}
+@media (max-width: 1024px) {
+  body main .grid .gridconteiner .sec-photo {
+    width: 400px;
+  }
+}
+@media (max-width: 780px) {
+  body main .grid .gridconteiner .sec-photo {
+    width: 310px;
+  }
 }
 body main .grid .gridconteiner .sec-photo h1 {
   color: white;
@@ -460,6 +559,13 @@ body main .grid .gridconteiner #first {
   height: 720px;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+@media (max-width: 1024px) {
+  body main .grid .gridconteiner #first {
+    height: 345px;
+    padding-bottom: 70px;
+    background-position: top;
+  }
 }
 body main .grid .gridconteiner #second {
   background-image: url(../images/b8.jpg);

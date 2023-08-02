@@ -14,7 +14,7 @@ body {
   header {
     width: 100%;
 
-    section {
+    .header {
       opacity: 0.6;
       align-items: center;
       z-index: 1;
@@ -26,6 +26,9 @@ body {
       width: 100%;
       justify-content: space-between;
       display: flex;
+      @media (max-width: 1024px) {
+        padding: 35px 19px;
+      }
       &:hover {
         opacity: 1;
       }
@@ -34,11 +37,18 @@ body {
         width: 120px;
         img {
           height: 40px;
+          @media (max-width: 1024px) {
+            height: 35px;
+            width: 100px;
+          }
         }
       }
 
       div {
         width: 70%;
+        @media (max-width: 1024px) {
+          width: 80%;
+        }
         .navigation {
           height: 40px;
           margin-top: 17px;
@@ -56,10 +66,17 @@ body {
               font-weight: 600;
               font-size: 20px;
               color: rgba(32, 26, 26, 0.988);
-
               font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+
+              @media (max-width: 1024px) {
+                font-size: 18px;
+                height: 28px;
+              }
               i {
                 margin-right: 7px;
+                @media (max-width: 1024px) {
+                  margin-right: 4px;
+                }
               }
               &:hover {
                 transform: translateY(-7px);
@@ -69,12 +86,16 @@ body {
             }
             select {
               font-family: Arial, Helvetica, sans-serif;
-
               padding: 7px;
               border: 3px solid gray;
               border-radius: 25px;
               width: 70px;
               height: 35px;
+              @media (max-width: 1024px) {
+                width: 60px;
+                padding: 0;
+                font-size: 15px;
+              }
               option {
                 img {
                   height: 15px;
@@ -97,22 +118,31 @@ body {
         height: 810px;
         background-image: url(../images/borjomi.jpg);
         @include forpicture;
+        @media (max-width: 1024px) {
+          justify-content: space-evenly;
+        }
         h1 {
           font-size: 100px;
           font-family: "BPG Mikheil Stefane", sans-serif;
           color: $h1-color;
           font-weight: 600;
+          @media (max-width: 1024px) {
+            font-size: 70px;
+          }
         }
         h2 {
           font-size: 140px;
           font-family: "BPG Phone Sans Bold Italic", sans-serif;
           color: white;
           font-weight: 600;
+          @media (max-width: 1024px) {
+            font-size: 100px;
+          }
         }
       }
       .flex {
         position: absolute;
-        top: 679px;
+        top: 649px;
         right: 60px;
         display: flex;
         gap: 40px;
@@ -172,6 +202,10 @@ body {
         rgba(230, 237, 236, 1) 53%,
         rgba(245, 252, 255, 1) 100%
       );
+      @media (max-width: 1024px) {
+        height: 1710px;
+        margin-bottom: 0;
+      }
 
       .tittle {
         @extend %tittle;
@@ -188,12 +222,19 @@ body {
         p {
           @extend %for-p;
           @extend %foralltext;
+          @media (max-width: 1024px) {
+            width: 712px;
+          }
         }
       }
       .locations {
         height: 800px;
         flex-wrap: wrap;
         @include flex;
+        @media (max-width: 1024px) {
+          height: 1190px;
+          justify-content: space-around;
+        }
         .button {
           &:nth-child(1) {
             .picture {
@@ -235,6 +276,12 @@ body {
           text-align: center;
           padding-top: 374px;
           gap: 10px;
+          @media (max-width: 1024px) {
+            width: 340px;
+            height: 500px;
+          }
+          @media (max-width: 780px) {
+          }
 
           &:hover {
             transform: translateY(-15px) scale(1.02);
@@ -275,6 +322,9 @@ body {
         p {
           @extend %for-p;
           @extend %foralltext;
+          @media (max-width: 1024px) {
+            width: 712px;
+          }
         }
       }
     }
@@ -293,9 +343,14 @@ body {
 
         grid-template-columns: auto auto auto;
 
-        // height: 710px;
-        // width: 1300px;
-        // background-color: #5cace4;
+        @media (max-width: 1024px) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        @media (max-width: 780px) {
+          padding: 0 10px;
+        }
 
         .sec-photo {
           display: flex;
@@ -305,6 +360,12 @@ body {
           cursor: pointer;
           border-radius: 10px;
           background-color: #ffea07;
+          @media (max-width: 1024px) {
+            width: 400px;
+          }
+          @media (max-width: 780px) {
+            width: 310px;
+          }
 
           h1 {
             color: white;
@@ -328,6 +389,11 @@ body {
           // width: 342px;
           grid-row-start: 1;
           grid-row-end: 3;
+          @media (max-width: 1024px) {
+            height: 345px;
+            padding-bottom: 70px;
+            background-position: top;
+          }
         }
         #second {
           background-image: url(../images/b8.jpg);
