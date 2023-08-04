@@ -145,7 +145,8 @@ a {
   box-sizing: border-box;
 }
 
-main .seconddestinations .sec-tittle .text, main .destinations .tittle .text {
+main .seconddestinations .sec-tittle .text,
+main .destinations .tittle .text {
   color: #fff;
   text-align: center;
   font-size: 26px;
@@ -153,7 +154,8 @@ main .seconddestinations .sec-tittle .text, main .destinations .tittle .text {
   line-height: normal;
 }
 
-main .seconddestinations .sec-tittle, main .destinations .tittle {
+main .seconddestinations .sec-tittle,
+main .destinations .tittle {
   margin-bottom: 90px;
   padding-top: 100px;
   display: flex;
@@ -163,7 +165,8 @@ main .seconddestinations .sec-tittle, main .destinations .tittle {
   align-items: center;
 }
 
-main .seconddestinations .sec-tittle h1, main .destinations .tittle h1 {
+main .seconddestinations .sec-tittle h1,
+main .destinations .tittle h1 {
   color: #ffd600;
   text-align: center;
   font-family: "BPG Mikheil Stefane", sans-serif;
@@ -173,7 +176,8 @@ main .seconddestinations .sec-tittle h1, main .destinations .tittle h1 {
   line-height: 82.8%;
 }
 
-main .seconddestinations .sec-tittle h2, main .destinations .tittle h2 {
+main .seconddestinations .sec-tittle h2,
+main .destinations .tittle h2 {
   color: #fff;
   text-align: center;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
@@ -184,14 +188,16 @@ main .seconddestinations .sec-tittle h2, main .destinations .tittle h2 {
   text-transform: lowercase;
 }
 
-main .seconddestinations .sec-tittle .text, main .destinations .tittle .text {
+main .seconddestinations .sec-tittle .text,
+main .destinations .tittle .text {
   font-family: "BPG Mikheil Stefane", sans-serif;
   width: 912px;
   font-weight: 800;
   color: #323535;
 }
 
-main .seconddestinations .sec-tittle .amptysharp, main .destinations .tittle div {
+main .seconddestinations .sec-tittle .amptysharp,
+main .destinations .tittle div {
   width: 50px;
   height: 30px;
   background-color: #abbaba;
@@ -526,7 +532,12 @@ main .destinations {
   height: 1210px;
   margin-bottom: 100px;
   background: rgb(215, 220, 221);
-  background: linear-gradient(180deg, rgb(215, 220, 221) 0%, rgb(230, 237, 236) 53%, rgb(245, 252, 255) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(215, 220, 221) 0%,
+    rgb(230, 237, 236) 53%,
+    rgb(245, 252, 255) 100%
+  );
 }
 @media (max-width: 1024px) {
   main .destinations {
@@ -1142,7 +1153,15 @@ main footer section .icons {
   height: 18.13px;
   width: 18.13px;
 }
-.servicesweb main .weather .describe-conteiner .describe .population img .numbers .quantity {
+.servicesweb
+  main
+  .weather
+  .describe-conteiner
+  .describe
+  .population
+  img
+  .numbers
+  .quantity {
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
   font-size: 14px;
@@ -1407,7 +1426,7 @@ main footer section .icons {
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
 }
@@ -1457,7 +1476,7 @@ main footer section .icons {
   justify-content: center;
   align-items: center;
   -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 .contacts-body main .contact .container .login-box form h2 {
   text-align: center;
@@ -1491,8 +1510,24 @@ main footer section .icons {
   font-size: 1em;
   color: #fff;
 }
-.contacts-body main .contact .container .login-box form .input-box input:focus ~ label,
-.contacts-body main .contact .container .login-box form .input-box input:valid ~ label {
+.contacts-body
+  main
+  .contact
+  .container
+  .login-box
+  form
+  .input-box
+  input:focus
+  ~ label,
+.contacts-body
+  main
+  .contact
+  .container
+  .login-box
+  form
+  .input-box
+  input:valid
+  ~ label {
   top: -5px;
 }
 .contacts-body main .contact .container .login-box form .input-box .sec-icon {
@@ -1509,13 +1544,28 @@ main footer section .icons {
   display: flex;
   justify-content: space-between;
 }
-.contacts-body main .contact .container .login-box form .remember-forgot label input {
+.contacts-body
+  main
+  .contact
+  .container
+  .login-box
+  form
+  .remember-forgot
+  label
+  input {
   margin-right: 3px;
 }
 .contacts-body main .contact .container .login-box form .remember-forgot a {
   color: #fff;
 }
-.contacts-body main .contact .container .login-box form .remember-forgot a:hover {
+.contacts-body
+  main
+  .contact
+  .container
+  .login-box
+  form
+  .remember-forgot
+  a:hover {
   text-decoration: underline;
 }
 .contacts-body main .contact .container .login-box form button {
@@ -1578,7 +1628,7 @@ main footer section .icons {
   background: transparent;
   width: 70%;
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 20px;
   height: 400px;
   border: 2px solid #454040;
@@ -1604,4 +1654,4 @@ main footer section .icons {
   font-size: 20px;
   font-family: "BPG Nino Mkhedruli Bold";
   color: #fff;
-}/*# sourceMappingURL=global.css.map */
+} /*# sourceMappingURL=global.css.map */
