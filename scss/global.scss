@@ -11,471 +11,701 @@
 body {
   width: 100%;
   height: 3800px;
-  header {
-    width: 100%;
 
-    .header {
-      opacity: 0.6;
+  .header {
+    height: 101px;
+    opacity: 0.6;
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(243, 219, 0);
+    position: fixed;
+    top: 0;
+    padding: 0 25px;
+    justify-content: space-between;
+    display: flex;
+    transition: 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      height: 66px;
+      padding: 0 80px;
+    }
+
+    .logo {
+      a {
+        display: block;
+      }
+      width: 120px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      z-index: 1;
-      border-bottom: 2px solid black;
-      background-color: rgb(255, 255, 255);
-      position: fixed;
-      top: 0px;
-      padding: 35px 80px;
-      width: 100%;
+    }
+    .menu {
       justify-content: space-between;
       display: flex;
-      @media (max-width: 1024px) {
-        padding: 35px 19px;
-      }
-      &:hover {
-        opacity: 1;
-      }
+      flex-direction: row;
+      z-index: 1;
+      align-items: center;
+      transition: 0.5s;
+    }
 
-      .logo {
-        width: 120px;
-        img {
-          height: 40px;
-          @media (max-width: 1024px) {
-            height: 35px;
-            width: 100px;
-          }
+    .navigation input:checked ~ .humburger {
+      background: transparent;
+    }
+    .navigation input:checked ~ .humburger:before {
+      transform: rotate(-45deg);
+      top: 0;
+      width: 30px;
+    }
+    .navigation input:checked ~ .humburger:after {
+      transform: rotate(45deg);
+      top: 0;
+      width: 30px;
+    }
+
+    .humburger {
+      position: relative;
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      z-index: 2;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .humburger:before,
+    .humburger:after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      right: 0;
+      background: #fff;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .humburger:before {
+      top: -10px;
+      width: 20px;
+    }
+    .humburger:after {
+      top: 10px;
+      width: 25px;
+    }
+    .toggle-menu {
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      z-index: 3;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .humburger,
+    .toggle-menu {
+      display: none;
+    }
+
+    .navigation input:checked ~ .menu {
+      right: 0;
+      box-shadow: -20px 0 40px rgb(0, 0, 0, 0.3);
+    }
+
+    @media screen and (max-width: 768px) {
+      .humburger,
+      .toggle-menu {
+        display: block;
+      }
+      .header {
+        padding: 10px 20px;
+      }
+      .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background: #ffea07;
+        width: 300px;
+        height: 600px;
+        padding-top: 65px;
+      }
+      .menu li {
+        width: 100%;
+      }
+      .menu li a,
+      .menu li a:hover {
+        padding: 40px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 rgba(30, 27, 27, 0.1) inset;
+      }
+    }
+
+    #active {
+      color: gray;
+    }
+    li {
+      list-style: none;
+      .link {
+        display: block;
+        text-decoration: none;
+        padding: 40px 25px;
+        line-height: 1;
+        transition: 0.3s;
+        text-align: center;
+        &:hover {
+          box-shadow: 0 -5px 0 #fff inset, 500px 0 0 rgba(0, 0, 0, 0.03) inset;
+          padding: 35px 25px 45px 25px;
         }
-      }
 
-      div {
-        width: 70%;
+        font-weight: 600;
+        font-size: 20px;
+        color: rgba(32, 26, 26, 0.988);
+        font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+
         @media (max-width: 1024px) {
-          width: 80%;
+          font-size: 18px;
+          height: 28px;
         }
-        .navigation {
-          height: 40px;
-          margin-top: 17px;
-          ul {
-            justify-content: space-between;
-            display: flex;
-
-            #active {
-              color: gray;
-            }
-            .link {
-              width: 140px;
-              text-align: center;
-              transition: transform, all ease-in-out 0.4s;
-              font-weight: 600;
-              font-size: 20px;
-              color: rgba(32, 26, 26, 0.988);
-              font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-
-              @media (max-width: 1024px) {
-                font-size: 18px;
-                height: 28px;
-              }
-              i {
-                margin-right: 7px;
-                @media (max-width: 1024px) {
-                  margin-right: 4px;
-                }
-              }
-              &:hover {
-                transform: translateY(-7px);
-                border-bottom: 3px solid #5cace4;
-                color: #5cace4;
-              }
-            }
-            select {
-              font-family: Arial, Helvetica, sans-serif;
-              padding: 7px;
-              border: 3px solid gray;
-              border-radius: 25px;
-              width: 70px;
-              height: 35px;
-              @media (max-width: 1024px) {
-                width: 60px;
-                padding: 0;
-                font-size: 15px;
-              }
-              option {
-                img {
-                  height: 15px;
-                }
-              }
-            }
+        i {
+          margin-right: 7px;
+          @media (max-width: 1024px) {
+            margin-right: 4px;
           }
+        }
+      }
+    }
+
+    // select {
+    //   font-family: Arial, Helvetica, sans-serif;
+    //   padding: 7px;
+    //   border: 3px solid gray;
+    //   border-radius: 25px;
+    //   width: 70px;
+    //   height: 35px;
+    //   @media (max-width: 1024px) {
+    //     width: 60px;
+    //     padding: 0;
+    //     font-size: 15px;
+    //   }
+    //   option {
+    //     img {
+    //       height: 15px;
+    //     }
+    //   }
+    // }
+  }
+}
+
+main {
+  .underheader {
+    .bg-Nature {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 240px 100px;
+      height: 810px;
+      background-image: url(../images/borjomi.jpg);
+      @include forpicture;
+      @media (max-width: 1024px) {
+        justify-content: space-evenly;
+      }
+      @media (max-width: 768px) {
+        padding: 240px 60px;
+      }
+      @media (max-width: 480px) {
+        height: 0;
+      }
+      h1 {
+        font-size: 100px;
+        font-family: "BPG Mikheil Stefane", sans-serif;
+        color: $h1-color;
+        font-weight: 600;
+        @media (max-width: 1024px) {
+          font-size: 70px;
+        }
+        @media (max-width: 768px) {
+          font-size: 50px;
+        }
+        @media (max-width: 480px) {
+          font-size: 40px;
+        }
+      }
+      h2 {
+        font-size: 140px;
+        font-family: "BPG Phone Sans Bold Italic", sans-serif;
+        color: white;
+        font-weight: 600;
+        @media (max-width: 1024px) {
+          font-size: 100px;
+        }
+        @media (max-width: 768px) {
+          font-size: 70px;
+        }
+        @media (max-width: 480px) {
+          font-size: 55px;
+        }
+      }
+    }
+    .flex {
+      position: absolute;
+      top: 649px;
+      right: 60px;
+      display: flex;
+      gap: 40px;
+      width: 300px;
+      height: 90px;
+      @media (max-width: 768px) {
+        right: 30px;
+      }
+      @media (max-width: 480px) {
+        width: 240px;
+        gap: 0;
+        justify-content: space-between;
+        right: 0;
+        top: 390px;
+      }
+      .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88px;
+        height: 88px;
+        background-color: rgb(255 186 0);
+        border: 2px solid;
+        border-radius: 45px;
+        border-color: black;
+        @media (max-width: 768px) {
+          width: 78px;
+          height: 78px;
+        }
+        @media (max-width: 480px) {
+          width: 78px;
+          height: 78px;
+        }
+        img {
+          animation: mymove 0.8s infinite linear 0.8s;
+          @media (max-width: 480px) {
+            height: 70px;
+          }
+        }
+        @keyframes mymove {
+          0% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-15px);
+          }
+          75% {
+            transform: translateY(5px);
+          }
+
+          100% {
+            transform: translateY(5px);
+          }
+        }
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        p {
+          font-weight: 700;
+          font-size: 25px;
+          color: rgba(255, 255, 255, 0.99);
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
         }
       }
     }
   }
-  main {
-    .underheader {
-      .bg-Nature {
-        position: relative;
+  .destinations {
+    height: 1210px;
+    margin-bottom: 100px;
+    background: rgb(215, 220, 221);
+    background: linear-gradient(
+      180deg,
+      rgba(215, 220, 221, 1) 0%,
+      rgba(230, 237, 236, 1) 53%,
+      rgba(245, 252, 255, 1) 100%
+    );
+    @media (max-width: 1024px) {
+      height: 1710px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 480px) {
+      height: 2510px;
+    }
+
+    .tittle {
+      @extend %tittle;
+
+      h1 {
+        @extend %for-h1;
+        @media (max-width: 768px) {
+          font-size: 44px;
+        }
+        @media (max-width: 480px) {
+          font-size: 34px;
+        }
+      }
+      h2 {
+        @extend %for-h2;
+        @media (max-width: 768px) {
+          font-size: 60px;
+        }
+        @media (max-width: 480px) {
+          font-size: 50px;
+        }
+      }
+      div {
+        @extend %for-amptysharp;
+      }
+      .text {
+        @extend %for-p;
+        @extend %foralltext;
+        @media (max-width: 1024px) {
+          width: 712px;
+        }
+        @media (max-width: 768px) {
+          width: 612px;
+        }
+        @media (max-width: 480px) {
+          width: 460px;
+          font-size: 18px;
+        }
+      }
+    }
+    .locations {
+      height: 800px;
+      flex-wrap: wrap;
+      @include flex;
+      @media (max-width: 1024px) {
+        height: 1190px;
+        justify-content: space-around;
+      }
+      @media (max-width: 768px) {
+        justify-content: space-evenly;
+      }
+      @media (max-width: 480px) {
+        height: 2100px;
+      }
+      .button {
+        &:nth-child(1) {
+          .picture {
+            background-image: url(../images/borjomi1.jpg);
+            @include forpicture;
+          }
+        }
+        &:nth-child(2) {
+          .picture {
+            background-image: url(../images/borjomi2.jpg);
+            @include forpicture;
+          }
+        }
+        &:nth-child(3) {
+          .picture {
+            background-image: url(../images/blue-palace-firuza-firuza.jpg);
+            @include forpicture;
+          }
+        }
+        &:nth-child(4) {
+          .picture {
+            background-image: url(../images/green-monastery-totale-2-1000.jpg);
+            @include forpicture;
+          }
+        }
+      }
+
+      .picture {
+        // border: 3px solid rgb(82, 81, 81);
+        cursor: pointer;
+        width: 310px;
+        height: 553px;
+        border-radius: 10px;
+
+        background-color: rgb(244, 31, 31);
+        transition: transform 0.4s ease-in-out;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 240px 100px;
-        height: 810px;
-        background-image: url(../images/borjomi.jpg);
-        @include forpicture;
+        text-align: center;
+        padding-top: 374px;
+        gap: 10px;
         @media (max-width: 1024px) {
-          justify-content: space-evenly;
-        }
-        h1 {
-          font-size: 100px;
-          font-family: "BPG Mikheil Stefane", sans-serif;
-          color: $h1-color;
-          font-weight: 600;
-          @media (max-width: 1024px) {
-            font-size: 70px;
-          }
-        }
-        h2 {
-          font-size: 140px;
-          font-family: "BPG Phone Sans Bold Italic", sans-serif;
-          color: white;
-          font-weight: 600;
-          @media (max-width: 1024px) {
-            font-size: 100px;
-          }
-        }
-      }
-      .flex {
-        position: absolute;
-        top: 649px;
-        right: 60px;
-        display: flex;
-        gap: 40px;
-        width: 300px;
-        height: 90px;
-        .photo {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 88px;
-          height: 88px;
-          background-color: rgb(255 186 0);
-          border: 2px solid;
-          border-radius: 45px;
-          border-color: black;
-          img {
-            animation: mymove 0.8s infinite linear 0.8s;
-          }
-          @keyframes mymove {
-            0% {
-              transform: translateY(0px);
-            }
-
-            50% {
-              transform: translateY(-15px);
-            }
-            75% {
-              transform: translateY(5px);
-            }
-
-            100% {
-              transform: translateY(5px);
-            }
-          }
-        }
-        div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 150px;
-          p {
-            font-weight: 700;
-            font-size: 25px;
-            color: rgba(255, 255, 255, 0.99);
-            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-          }
-        }
-      }
-    }
-    .destinations {
-      height: 1210px;
-      margin-bottom: 100px;
-      background: rgb(215, 220, 221);
-      background: linear-gradient(
-        180deg,
-        rgba(215, 220, 221, 1) 0%,
-        rgba(230, 237, 236, 1) 53%,
-        rgba(245, 252, 255, 1) 100%
-      );
-      @media (max-width: 1024px) {
-        height: 1710px;
-        margin-bottom: 0;
-      }
-
-      .tittle {
-        @extend %tittle;
-
-        h1 {
-          @extend %for-h1;
-        }
-        h2 {
-          @extend %for-h2;
-        }
-        div {
-          @extend %for-amptysharp;
-        }
-        p {
-          @extend %for-p;
-          @extend %foralltext;
-          @media (max-width: 1024px) {
-            width: 712px;
-          }
-        }
-      }
-      .locations {
-        height: 800px;
-        flex-wrap: wrap;
-        @include flex;
-        @media (max-width: 1024px) {
-          height: 1190px;
-          justify-content: space-around;
-        }
-        .button {
-          &:nth-child(1) {
-            .picture {
-              background-image: url(../images/borjomi1.jpg);
-              @include forpicture;
-            }
-          }
-          &:nth-child(2) {
-            .picture {
-              background-image: url(../images/borjomi2.jpg);
-              @include forpicture;
-            }
-          }
-          &:nth-child(3) {
-            .picture {
-              background-image: url(../images/blue-palace-firuza-firuza.jpg);
-              @include forpicture;
-            }
-          }
-          &:nth-child(4) {
-            .picture {
-              background-image: url(../images/green-monastery-totale-2-1000.jpg);
-              @include forpicture;
-            }
-          }
-        }
-
-        .picture {
-          // border: 3px solid rgb(82, 81, 81);
-          cursor: pointer;
-          width: 310px;
-          height: 553px;
-          border-radius: 10px;
-
-          background-color: rgb(244, 31, 31);
-          transition: transform 0.4s ease-in-out;
-          display: flex;
-          flex-direction: column;
-          text-align: center;
-          padding-top: 374px;
-          gap: 10px;
-          @media (max-width: 1024px) {
-            width: 340px;
-            height: 500px;
-          }
-          @media (max-width: 780px) {
-          }
-
-          &:hover {
-            transform: translateY(-15px) scale(1.02);
-          }
-          h1 {
-            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-            font-size: 27px;
-            font-weight: 900;
-            color: whitesmoke;
-
-            // text-align: center;
-          }
-          p {
-            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-            font-size: 18px;
-            font-weight: 900;
-            color: whitesmoke;
-          }
-        }
-      }
-    }
-    .seconddestinations {
-      margin-bottom: 100px;
-      .sec-tittle {
-        @extend %tittle;
-
-        h1 {
-          @extend %for-h1;
-          color: #ffea07;
-        }
-        h2 {
-          @extend %for-h2;
-          color: black;
-        }
-        .amptysharp {
-          @extend %for-amptysharp;
-        }
-        p {
-          @extend %for-p;
-          @extend %foralltext;
-          @media (max-width: 1024px) {
-            width: 712px;
-          }
-        }
-      }
-    }
-    .grid {
-      height: 1200px;
-      // margin-bottom: 594px;
-      margin-bottom: 400px;
-      display: $display;
-      justify-content: center;
-      .gridconteiner {
-        padding: 0 50px;
-        width: 100%;
-        display: grid;
-
-        gap: 30px;
-
-        grid-template-columns: auto auto auto;
-
-        @media (max-width: 1024px) {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
+          width: 350px;
+          height: 500px;
         }
         @media (max-width: 780px) {
-          padding: 0 10px;
+          height: 480px;
+        }
+        @media (max-width: 480px) {
+          height: 440px;
+          width: 320px;
         }
 
-        .sec-photo {
-          display: flex;
-          justify-content: end;
-          flex-direction: column;
-          padding-bottom: 70px;
-          cursor: pointer;
-          border-radius: 10px;
-          background-color: #ffea07;
-          @media (max-width: 1024px) {
-            width: 400px;
-          }
-          @media (max-width: 780px) {
-            width: 310px;
-          }
+        &:hover {
+          transform: translateY(-15px) scale(1.02);
+        }
+        h1 {
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+          font-size: 27px;
+          font-weight: 900;
+          color: whitesmoke;
 
-          h1 {
-            color: white;
-            font-size: 27px;
-            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-            text-align: center;
-          }
-          h2 {
-            color: white;
-            font-size: 18px;
-            font-family: "BPG Nino Mkhedruli Bold", sans-serif;
-            text-align: center;
-          }
+          // text-align: center;
         }
-
-        #first {
-          padding-bottom: 200px;
-          background-image: url(../images/romanov-palace-known-likani-located-600w-1475101799.webp);
-          @include forpicture;
-          height: 720px;
-          // width: 342px;
-          grid-row-start: 1;
-          grid-row-end: 3;
-          @media (max-width: 1024px) {
-            height: 345px;
-            padding-bottom: 70px;
-            background-position: top;
-          }
-        }
-        #second {
-          background-image: url(../images/b8.jpg);
-          // width: 459px;
-          height: 345px;
-          @include forpicture;
-        }
-        #third {
-          background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
-          // width: 459px;
-          height: 345px;
-          @include forpicture;
-        }
-        #forth {
-          background-image: url(../images/კახის\ ტბა.jpg);
-          @include forpicture;
-          // background-size: contain;
-          // width: 948px;
-          height: 345px;
-          grid-column-start: 2;
-          grid-column-end: 4;
-        }
-        #fifth {
-          background-image: url(../images/b3.jpg);
-          // width: 459px;
-          height: 345px;
-          @include forpicture;
-        }
-        #sixth {
-          background-image: url(../images/dji-0561-12.jpg);
-          // width: 459px;
-          height: 345px;
-          @include forpicture;
-        }
-        #seventh {
-          background-image: url(../images/b6.jpg);
-          // width: 459px;
-          height: 345px;
-          @include forpicture;
+        p {
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+          font-size: 18px;
+          font-weight: 900;
+          color: whitesmoke;
         }
       }
     }
-    footer {
-      height: 400px;
-      width: 100%;
-      background-image: url(../images/footer2.png);
-      @include forpicture;
+  }
+  .seconddestinations {
+    margin-bottom: 100px;
+    .sec-tittle {
+      @extend %tittle;
 
-      section {
-        padding-top: 100px;
-        width: 100%;
+      h1 {
+        @extend %for-h1;
+        color: #ffea07;
+        @media (max-width: 768px) {
+          font-size: 44px;
+        }
+        @media (max-width: 480px) {
+          font-size: 34px;
+        }
+      }
+      h2 {
+        @extend %for-h2;
+        color: black;
+        @media (max-width: 768px) {
+          font-size: 60px;
+        }
+        @media (max-width: 480px) {
+          font-size: 50px;
+        }
+      }
+      .amptysharp {
+        @extend %for-amptysharp;
+      }
+      .text {
+        @extend %for-p;
+        @extend %foralltext;
+        @media (max-width: 1024px) {
+          width: 712px;
+        }
+        @media (max-width: 768px) {
+          width: 612px;
+        }
+        @media (max-width: 480px) {
+          width: 460px;
+          font-size: 19px;
+        }
+        @media (max-width: 480px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .grid {
+    height: 1200px;
+    // margin-bottom: 594px;
+    margin-bottom: 400px;
+    display: $display;
+    justify-content: center;
+    @media (max-width: 480px) {
+      height: 2400px;
+    }
+    .gridconteiner {
+      padding: 0 50px;
+      width: 100%;
+      display: grid;
+
+      gap: 30px;
+
+      grid-template-columns: auto auto auto;
+
+      @media (max-width: 1024px) {
         display: flex;
-        justify-content: space-between;
-        .ft-link {
-          padding-left: 77px;
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          h1 {
-            margin-bottom: 10px;
-            font-size: 20px;
-            font-weight: 900;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(249, 219, 219);
-          }
-          a {
-            font-size: 18px;
-            color: #848481;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            transition: 0.5s;
-            &:hover {
-              color: #5cace4;
-            }
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      @media (max-width: 768px) {
+        padding: 0 10px;
+        justify-content: space-evenly;
+      }
+
+      .sec-photo {
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        padding-bottom: 70px;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: #ffea07;
+        @media (max-width: 1024px) {
+          width: 400px;
+        }
+        @media (max-width: 768px) {
+          width: 345px;
+        }
+
+        h1 {
+          color: white;
+          font-size: 27px;
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+          text-align: center;
+          @media (max-width: 768px) {
+            font-size: 27px;
           }
         }
-        .icons {
-          padding-right: 232px;
-          padding-top: 34px;
-          display: flex;
-          flex-direction: column;
-          gap: 42px;
+        h2 {
+          color: white;
+          font-size: 18px;
+          font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+          text-align: center;
+        }
+      }
+
+      #first {
+        padding-bottom: 200px;
+        background-image: url(../images/romanov-palace-known-likani-located-600w-1475101799.webp);
+        @include forpicture;
+        height: 720px;
+        // width: 342px;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        @media (max-width: 1024px) {
+          height: 345px;
+          padding-bottom: 70px;
+          background-position: top;
+        }
+      }
+      #second {
+        background-image: url(../images/b8.jpg);
+        // width: 459px;
+        height: 345px;
+        @include forpicture;
+      }
+      #third {
+        background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
+        // width: 459px;
+        height: 345px;
+        @include forpicture;
+      }
+      #forth {
+        background-image: url(../images/კახის\ ტბა.jpg);
+        @include forpicture;
+        // background-size: contain;
+        // width: 948px;
+        height: 345px;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      #fifth {
+        background-image: url(../images/b3.jpg);
+        // width: 459px;
+        height: 345px;
+        @include forpicture;
+      }
+      #sixth {
+        background-image: url(../images/dji-0561-12.jpg);
+        // width: 459px;
+        height: 345px;
+        @include forpicture;
+      }
+      #seventh {
+        background-image: url(../images/b6.jpg);
+        // width: 459px;
+        height: 345px;
+        @include forpicture;
+      }
+    }
+  }
+  footer {
+    height: 400px;
+    width: 100%;
+    background-image: url(../images/footer2.png);
+    @include forpicture;
+    @media (max-width: 480px) {
+      height: 1000px;
+    }
+
+    section {
+      padding-top: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 1024px) {
+        justify-content: space-around;
+        padding: 80px 50px;
+      }
+
+      @media (max-width: 768px) {
+        padding-top: 80px;
+        justify-content: space-around;
+      }
+      @media (max-width: 480px) {
+        padding-left: 100px;
+        padding-top: 30px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 97%;
+        justify-content: space-between;
+      }
+
+      .ft-link {
+        padding-left: 77px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @media (max-width: 768px) {
+          padding-left: 0;
+        }
+        @media (max-width: 1024px) {
+          padding-left: 0;
+        }
+        h1 {
+          margin-bottom: 10px;
+          font-size: 20px;
+          font-weight: 900;
+          font-family: Arial, Helvetica, sans-serif;
+          color: rgb(249, 219, 219);
+        }
+        a {
+          font-size: 18px;
+          color: #848481;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 600;
+          transition: 0.5s;
+          &:hover {
+            color: #5cace4;
+          }
+        }
+      }
+      .icons {
+        padding-right: 232px;
+        padding-top: 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+        @media (max-width: 1024px) {
+          padding-right: 0;
+        }
+        @media (max-width: 768px) {
+          padding-right: 0;
         }
       }
     }
@@ -485,7 +715,10 @@ body {
 .servicesweb {
   height: 1000px;
   main {
-    padding-top: 129px;
+    padding-top: 101px;
+    @media (max-width: 768px) {
+      padding-top: 67px;
+    }
     #bg-color {
       width: 100%;
       height: 612px;
@@ -539,6 +772,9 @@ body {
       justify-content: space-between;
       margin-bottom: 100px;
       padding: 58px 70px;
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
       .offers {
         height: 1500px;
         width: 647px;
@@ -573,6 +809,9 @@ body {
             font-size: 20px;
             font-weight: 700;
             color: #6c7070;
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -782,10 +1021,21 @@ body {
     height: 133px;
     width: 90%;
     background-color: #527f1a;
+    @media (max-width: 768px) {
+      justify-content: space-around;
+      padding: 0 20px;
+    }
     div {
+      @media (max-width: 1024px) {
+        width: 200px;
+      }
+
       img {
         position: absolute;
         top: -50px;
+        @media (max-width: 768px) {
+          width: 170px;
+        }
       }
     }
     div {
@@ -795,10 +1045,15 @@ body {
         font-weight: 800;
         color: white;
         font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+        @media (max-width: 1024px) {
+          font-size: 25px;
+        }
       }
       p {
         font-size: 20px;
-
+        @media (max-width: 1024px) {
+          font-size: 18px;
+        }
         color: white;
         font-family: "BPG Nino Mkhedruli Bold", sans-serif;
       }
@@ -851,11 +1106,34 @@ body {
           filter: hue-rotate(360deg);
         }
       }
+      @media (max-width: 1024px) {
+        padding: 170px 40px;
+      }
+      @media (max-width: 768px) {
+        padding: 0 10px;
+      }
+      @media (max-width: 480px) {
+        padding-top: 120px;
+      }
       .content {
         font-family: "BPG Nino Mkhedruli Bold", sans-serif;
         // padding-top: 200px;
         max-width: 800px;
         text-align: center;
+
+        @media (max-width: 1024px) {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 100px;
+        }
+        @media (max-width: 768px) {
+          margin-bottom: 0;
+          padding-top: 200px;
+        }
+        @media (max-width: 480px) {
+          padding-top: 0;
+        }
 
         h2 {
           margin-bottom: 25px;
@@ -864,8 +1142,13 @@ body {
           font-weight: 500;
         }
         p {
+          font-size: 25px;
           color: #fff;
           font-weight: 300;
+          @media (max-width: 1024px) {
+            width: 400px;
+            font-size: 20px;
+          }
         }
       }
       .container {
@@ -873,7 +1156,11 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 30px;
+        @media (max-width: 768px) {
+          height: 1000px;
+          flex-wrap: wrap;
+          margin-top: 100px;
+        }
 
         .contactInfo {
           justify-content: space-evenly;
@@ -887,7 +1174,9 @@ body {
           // width: 50%;
           display: flex;
           flex-direction: column;
-
+          @media (max-width: 768px) {
+            padding: 60px;
+          }
           .box {
             position: relative;
             padding: 20px 0;
@@ -1038,6 +1327,15 @@ body {
     width: 100%;
     background-image: url(../images/8309_1.jpg);
     @include forpicture;
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+    }
+    @media (max-width: 480px) {
+      padding: 20px;
+    }
     .about-box {
       margin: 0 auto;
       background: transparent;
@@ -1050,6 +1348,10 @@ body {
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      @media (max-width: 1024px) {
+        width: 600px;
+        height: 500px;
+      }
       h1 {
         font-size: 35px;
         font-weight: 800;

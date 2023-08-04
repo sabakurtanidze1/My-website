@@ -145,7 +145,7 @@ a {
   box-sizing: border-box;
 }
 
-body main .seconddestinations .sec-tittle p, body main .destinations .tittle p {
+main .seconddestinations .sec-tittle .text, main .destinations .tittle .text {
   color: #fff;
   text-align: center;
   font-size: 26px;
@@ -153,7 +153,7 @@ body main .seconddestinations .sec-tittle p, body main .destinations .tittle p {
   line-height: normal;
 }
 
-body main .seconddestinations .sec-tittle, body main .destinations .tittle {
+main .seconddestinations .sec-tittle, main .destinations .tittle {
   margin-bottom: 90px;
   padding-top: 100px;
   display: flex;
@@ -163,7 +163,7 @@ body main .seconddestinations .sec-tittle, body main .destinations .tittle {
   align-items: center;
 }
 
-body main .seconddestinations .sec-tittle h1, body main .destinations .tittle h1 {
+main .seconddestinations .sec-tittle h1, main .destinations .tittle h1 {
   color: #ffd600;
   text-align: center;
   font-family: "BPG Mikheil Stefane", sans-serif;
@@ -173,7 +173,7 @@ body main .seconddestinations .sec-tittle h1, body main .destinations .tittle h1
   line-height: 82.8%;
 }
 
-body main .seconddestinations .sec-tittle h2, body main .destinations .tittle h2 {
+main .seconddestinations .sec-tittle h2, main .destinations .tittle h2 {
   color: #fff;
   text-align: center;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
@@ -184,14 +184,14 @@ body main .seconddestinations .sec-tittle h2, body main .destinations .tittle h2
   text-transform: lowercase;
 }
 
-body main .seconddestinations .sec-tittle p, body main .destinations .tittle p {
+main .seconddestinations .sec-tittle .text, main .destinations .tittle .text {
   font-family: "BPG Mikheil Stefane", sans-serif;
   width: 912px;
   font-weight: 800;
   color: #323535;
 }
 
-body main .seconddestinations .sec-tittle .amptysharp, body main .destinations .tittle div {
+main .seconddestinations .sec-tittle .amptysharp, main .destinations .tittle div {
   width: 50px;
   height: 30px;
   background-color: #abbaba;
@@ -203,108 +203,177 @@ body {
   width: 100%;
   height: 3800px;
 }
-body header {
-  width: 100%;
-}
-body header .header {
+body .header {
+  height: 101px;
   opacity: 0.6;
-  align-items: center;
   z-index: 1;
-  border-bottom: 2px solid black;
-  background-color: rgb(255, 255, 255);
-  position: fixed;
-  top: 0px;
-  padding: 35px 80px;
   width: 100%;
+  align-items: center;
+  background-color: rgb(243, 219, 0);
+  position: fixed;
+  top: 0;
+  padding: 0 25px;
   justify-content: space-between;
   display: flex;
+  transition: 0.3s;
 }
-@media (max-width: 1024px) {
-  body header .header {
-    padding: 35px 19px;
-  }
-}
-body header .header:hover {
+body .header:hover {
   opacity: 1;
 }
-body header .header .logo {
+@media (max-width: 768px) {
+  body .header {
+    height: 66px;
+    padding: 0 80px;
+  }
+}
+body .header .logo {
   width: 120px;
 }
-body header .header .logo img {
-  height: 40px;
+body .header .logo a {
+  display: block;
 }
-@media (max-width: 1024px) {
-  body header .header .logo img {
-    height: 35px;
-    width: 100px;
-  }
+body .header .logo img {
+  display: block;
+  width: 100%;
 }
-body header .header div {
-  width: 70%;
+body .header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (max-width: 1024px) {
-  body header .header div {
-    width: 80%;
-  }
-}
-body header .header div .navigation {
-  height: 40px;
-  margin-top: 17px;
-}
-body header .header div .navigation ul {
+body .header .menu {
   justify-content: space-between;
   display: flex;
+  flex-direction: row;
+  z-index: 1;
+  align-items: center;
+  transition: 0.5s;
 }
-body header .header div .navigation ul #active {
+body .header .navigation input:checked ~ .humburger {
+  background: transparent;
+}
+body .header .navigation input:checked ~ .humburger:before {
+  transform: rotate(-45deg);
+  top: 0;
+  width: 30px;
+}
+body .header .navigation input:checked ~ .humburger:after {
+  transform: rotate(45deg);
+  top: 0;
+  width: 30px;
+}
+body .header .humburger {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+body .header .humburger:before,
+body .header .humburger:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+body .header .humburger:before {
+  top: -10px;
+  width: 20px;
+}
+body .header .humburger:after {
+  top: 10px;
+  width: 25px;
+}
+body .header .toggle-menu {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+body .header .humburger,
+body .header .toggle-menu {
+  display: none;
+}
+body .header .navigation input:checked ~ .menu {
+  right: 0;
+  box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  body .header .humburger,
+  body .header .toggle-menu {
+    display: block;
+  }
+  body .header .header {
+    padding: 10px 20px;
+  }
+  body .header .menu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background: #ffea07;
+    width: 300px;
+    height: 600px;
+    padding-top: 65px;
+  }
+  body .header .menu li {
+    width: 100%;
+  }
+  body .header .menu li a,
+  body .header .menu li a:hover {
+    padding: 40px;
+    font-size: 24px;
+    box-shadow: 0 1px 0 rgba(30, 27, 27, 0.1) inset;
+  }
+}
+body .header #active {
   color: gray;
 }
-body header .header div .navigation ul .link {
-  width: 140px;
+body .header li {
+  list-style: none;
+}
+body .header li .link {
+  display: block;
+  text-decoration: none;
+  padding: 40px 25px;
+  line-height: 1;
+  transition: 0.3s;
   text-align: center;
-  transition: transform, all ease-in-out 0.4s;
   font-weight: 600;
   font-size: 20px;
   color: rgba(32, 26, 26, 0.988);
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
+body .header li .link:hover {
+  box-shadow: 0 -5px 0 #fff inset, 500px 0 0 rgba(0, 0, 0, 0.03) inset;
+  padding: 35px 25px 45px 25px;
+}
 @media (max-width: 1024px) {
-  body header .header div .navigation ul .link {
+  body .header li .link {
     font-size: 18px;
     height: 28px;
   }
 }
-body header .header div .navigation ul .link i {
+body .header li .link i {
   margin-right: 7px;
 }
 @media (max-width: 1024px) {
-  body header .header div .navigation ul .link i {
+  body .header li .link i {
     margin-right: 4px;
   }
 }
-body header .header div .navigation ul .link:hover {
-  transform: translateY(-7px);
-  border-bottom: 3px solid #5cace4;
-  color: #5cace4;
-}
-body header .header div .navigation ul select {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 7px;
-  border: 3px solid gray;
-  border-radius: 25px;
-  width: 70px;
-  height: 35px;
-}
-@media (max-width: 1024px) {
-  body header .header div .navigation ul select {
-    width: 60px;
-    padding: 0;
-    font-size: 15px;
-  }
-}
-body header .header div .navigation ul select option img {
-  height: 15px;
-}
-body main .underheader .bg-Nature {
+
+main .underheader .bg-Nature {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -317,33 +386,63 @@ body main .underheader .bg-Nature {
   background-size: cover;
 }
 @media (max-width: 1024px) {
-  body main .underheader .bg-Nature {
+  main .underheader .bg-Nature {
     justify-content: space-evenly;
   }
 }
-body main .underheader .bg-Nature h1 {
+@media (max-width: 768px) {
+  main .underheader .bg-Nature {
+    padding: 240px 60px;
+  }
+}
+@media (max-width: 480px) {
+  main .underheader .bg-Nature {
+    height: 0;
+  }
+}
+main .underheader .bg-Nature h1 {
   font-size: 100px;
   font-family: "BPG Mikheil Stefane", sans-serif;
   color: #ffc700;
   font-weight: 600;
 }
 @media (max-width: 1024px) {
-  body main .underheader .bg-Nature h1 {
+  main .underheader .bg-Nature h1 {
     font-size: 70px;
   }
 }
-body main .underheader .bg-Nature h2 {
+@media (max-width: 768px) {
+  main .underheader .bg-Nature h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 480px) {
+  main .underheader .bg-Nature h1 {
+    font-size: 40px;
+  }
+}
+main .underheader .bg-Nature h2 {
   font-size: 140px;
   font-family: "BPG Phone Sans Bold Italic", sans-serif;
   color: white;
   font-weight: 600;
 }
 @media (max-width: 1024px) {
-  body main .underheader .bg-Nature h2 {
+  main .underheader .bg-Nature h2 {
     font-size: 100px;
   }
 }
-body main .underheader .flex {
+@media (max-width: 768px) {
+  main .underheader .bg-Nature h2 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 480px) {
+  main .underheader .bg-Nature h2 {
+    font-size: 55px;
+  }
+}
+main .underheader .flex {
   position: absolute;
   top: 649px;
   right: 60px;
@@ -352,7 +451,21 @@ body main .underheader .flex {
   width: 300px;
   height: 90px;
 }
-body main .underheader .flex .photo {
+@media (max-width: 768px) {
+  main .underheader .flex {
+    right: 30px;
+  }
+}
+@media (max-width: 480px) {
+  main .underheader .flex {
+    width: 240px;
+    gap: 0;
+    justify-content: space-between;
+    right: 0;
+    top: 390px;
+  }
+}
+main .underheader .flex .photo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,8 +476,25 @@ body main .underheader .flex .photo {
   border-radius: 45px;
   border-color: black;
 }
-body main .underheader .flex .photo img {
+@media (max-width: 768px) {
+  main .underheader .flex .photo {
+    width: 78px;
+    height: 78px;
+  }
+}
+@media (max-width: 480px) {
+  main .underheader .flex .photo {
+    width: 78px;
+    height: 78px;
+  }
+}
+main .underheader .flex .photo img {
   animation: mymove 0.8s infinite linear 0.8s;
+}
+@media (max-width: 480px) {
+  main .underheader .flex .photo img {
+    height: 70px;
+  }
 }
 @keyframes mymove {
   0% {
@@ -380,36 +510,72 @@ body main .underheader .flex .photo img {
     transform: translateY(5px);
   }
 }
-body main .underheader .flex div {
+main .underheader .flex div {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 150px;
 }
-body main .underheader .flex div p {
+main .underheader .flex div p {
   font-weight: 700;
   font-size: 25px;
   color: rgba(255, 255, 255, 0.99);
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
-body main .destinations {
+main .destinations {
   height: 1210px;
   margin-bottom: 100px;
   background: rgb(215, 220, 221);
   background: linear-gradient(180deg, rgb(215, 220, 221) 0%, rgb(230, 237, 236) 53%, rgb(245, 252, 255) 100%);
 }
 @media (max-width: 1024px) {
-  body main .destinations {
+  main .destinations {
     height: 1710px;
     margin-bottom: 0;
   }
 }
+@media (max-width: 480px) {
+  main .destinations {
+    height: 2510px;
+  }
+}
+@media (max-width: 768px) {
+  main .destinations .tittle h1 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 480px) {
+  main .destinations .tittle h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 768px) {
+  main .destinations .tittle h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 480px) {
+  main .destinations .tittle h2 {
+    font-size: 50px;
+  }
+}
 @media (max-width: 1024px) {
-  body main .destinations .tittle p {
+  main .destinations .tittle .text {
     width: 712px;
   }
 }
-body main .destinations .locations {
+@media (max-width: 768px) {
+  main .destinations .tittle .text {
+    width: 612px;
+  }
+}
+@media (max-width: 480px) {
+  main .destinations .tittle .text {
+    width: 460px;
+    font-size: 18px;
+  }
+}
+main .destinations .locations {
   height: 800px;
   flex-wrap: wrap;
   display: flex;
@@ -417,36 +583,46 @@ body main .destinations .locations {
   justify-content: space-evenly;
 }
 @media (max-width: 1024px) {
-  body main .destinations .locations {
+  main .destinations .locations {
     height: 1190px;
     justify-content: space-around;
   }
 }
-body main .destinations .locations .button:nth-child(1) .picture {
+@media (max-width: 768px) {
+  main .destinations .locations {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 480px) {
+  main .destinations .locations {
+    height: 2100px;
+  }
+}
+main .destinations .locations .button:nth-child(1) .picture {
   background-image: url(../images/borjomi1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .button:nth-child(2) .picture {
+main .destinations .locations .button:nth-child(2) .picture {
   background-image: url(../images/borjomi2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .button:nth-child(3) .picture {
+main .destinations .locations .button:nth-child(3) .picture {
   background-image: url(../images/blue-palace-firuza-firuza.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .button:nth-child(4) .picture {
+main .destinations .locations .button:nth-child(4) .picture {
   background-image: url(../images/green-monastery-totale-2-1000.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .destinations .locations .picture {
+main .destinations .locations .picture {
   cursor: pointer;
   width: 310px;
   height: 553px;
@@ -460,47 +636,99 @@ body main .destinations .locations .picture {
   gap: 10px;
 }
 @media (max-width: 1024px) {
-  body main .destinations .locations .picture {
-    width: 340px;
+  main .destinations .locations .picture {
+    width: 350px;
     height: 500px;
   }
 }
-body main .destinations .locations .picture:hover {
+@media (max-width: 780px) {
+  main .destinations .locations .picture {
+    height: 480px;
+  }
+}
+@media (max-width: 480px) {
+  main .destinations .locations .picture {
+    height: 440px;
+    width: 320px;
+  }
+}
+main .destinations .locations .picture:hover {
   transform: translateY(-15px) scale(1.02);
 }
-body main .destinations .locations .picture h1 {
+main .destinations .locations .picture h1 {
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
   font-size: 27px;
   font-weight: 900;
   color: whitesmoke;
 }
-body main .destinations .locations .picture p {
+main .destinations .locations .picture p {
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
   font-size: 18px;
   font-weight: 900;
   color: whitesmoke;
 }
-body main .seconddestinations {
+main .seconddestinations {
   margin-bottom: 100px;
 }
-body main .seconddestinations .sec-tittle h1 {
+main .seconddestinations .sec-tittle h1 {
   color: #ffea07;
 }
-body main .seconddestinations .sec-tittle h2 {
+@media (max-width: 768px) {
+  main .seconddestinations .sec-tittle h1 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 480px) {
+  main .seconddestinations .sec-tittle h1 {
+    font-size: 34px;
+  }
+}
+main .seconddestinations .sec-tittle h2 {
   color: black;
 }
+@media (max-width: 768px) {
+  main .seconddestinations .sec-tittle h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 480px) {
+  main .seconddestinations .sec-tittle h2 {
+    font-size: 50px;
+  }
+}
 @media (max-width: 1024px) {
-  body main .seconddestinations .sec-tittle p {
+  main .seconddestinations .sec-tittle .text {
     width: 712px;
   }
 }
-body main .grid {
+@media (max-width: 768px) {
+  main .seconddestinations .sec-tittle .text {
+    width: 612px;
+  }
+}
+@media (max-width: 480px) {
+  main .seconddestinations .sec-tittle .text {
+    width: 460px;
+    font-size: 19px;
+  }
+}
+@media (max-width: 480px) {
+  main .seconddestinations .sec-tittle .text {
+    font-size: 18px;
+  }
+}
+main .grid {
   height: 1200px;
   margin-bottom: 400px;
   display: flex;
   justify-content: center;
 }
-body main .grid .gridconteiner {
+@media (max-width: 480px) {
+  main .grid {
+    height: 2400px;
+  }
+}
+main .grid .gridconteiner {
   padding: 0 50px;
   width: 100%;
   display: grid;
@@ -508,18 +736,19 @@ body main .grid .gridconteiner {
   grid-template-columns: auto auto auto;
 }
 @media (max-width: 1024px) {
-  body main .grid .gridconteiner {
+  main .grid .gridconteiner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 }
-@media (max-width: 780px) {
-  body main .grid .gridconteiner {
+@media (max-width: 768px) {
+  main .grid .gridconteiner {
     padding: 0 10px;
+    justify-content: space-evenly;
   }
 }
-body main .grid .gridconteiner .sec-photo {
+main .grid .gridconteiner .sec-photo {
   display: flex;
   justify-content: end;
   flex-direction: column;
@@ -529,28 +758,33 @@ body main .grid .gridconteiner .sec-photo {
   background-color: #ffea07;
 }
 @media (max-width: 1024px) {
-  body main .grid .gridconteiner .sec-photo {
+  main .grid .gridconteiner .sec-photo {
     width: 400px;
   }
 }
-@media (max-width: 780px) {
-  body main .grid .gridconteiner .sec-photo {
-    width: 310px;
+@media (max-width: 768px) {
+  main .grid .gridconteiner .sec-photo {
+    width: 345px;
   }
 }
-body main .grid .gridconteiner .sec-photo h1 {
+main .grid .gridconteiner .sec-photo h1 {
   color: white;
   font-size: 27px;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
   text-align: center;
 }
-body main .grid .gridconteiner .sec-photo h2 {
+@media (max-width: 768px) {
+  main .grid .gridconteiner .sec-photo h1 {
+    font-size: 27px;
+  }
+}
+main .grid .gridconteiner .sec-photo h2 {
   color: white;
   font-size: 18px;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
   text-align: center;
 }
-body main .grid .gridconteiner #first {
+main .grid .gridconteiner #first {
   padding-bottom: 200px;
   background-image: url(../images/romanov-palace-known-likani-located-600w-1475101799.webp);
   background-position: center;
@@ -561,27 +795,27 @@ body main .grid .gridconteiner #first {
   grid-row-end: 3;
 }
 @media (max-width: 1024px) {
-  body main .grid .gridconteiner #first {
+  main .grid .gridconteiner #first {
     height: 345px;
     padding-bottom: 70px;
     background-position: top;
   }
 }
-body main .grid .gridconteiner #second {
+main .grid .gridconteiner #second {
   background-image: url(../images/b8.jpg);
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .grid .gridconteiner #third {
+main .grid .gridconteiner #third {
   background-image: url(../images/deLoxqrgG3hw9364V98Oy92FjQrMNz.jpg);
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .grid .gridconteiner #forth {
+main .grid .gridconteiner #forth {
   background-image: url(../images/კახის\ ტბა.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -590,28 +824,28 @@ body main .grid .gridconteiner #forth {
   grid-column-start: 2;
   grid-column-end: 4;
 }
-body main .grid .gridconteiner #fifth {
+main .grid .gridconteiner #fifth {
   background-image: url(../images/b3.jpg);
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .grid .gridconteiner #sixth {
+main .grid .gridconteiner #sixth {
   background-image: url(../images/dji-0561-12.jpg);
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main .grid .gridconteiner #seventh {
+main .grid .gridconteiner #seventh {
   background-image: url(../images/b6.jpg);
   height: 345px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main footer {
+main footer {
   height: 400px;
   width: 100%;
   background-image: url(../images/footer2.png);
@@ -619,48 +853,100 @@ body main footer {
   background-repeat: no-repeat;
   background-size: cover;
 }
-body main footer section {
+@media (max-width: 480px) {
+  main footer {
+    height: 1000px;
+  }
+}
+main footer section {
   padding-top: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-body main footer section .ft-link {
+@media (max-width: 1024px) {
+  main footer section {
+    justify-content: space-around;
+    padding: 80px 50px;
+  }
+}
+@media (max-width: 768px) {
+  main footer section {
+    padding-top: 80px;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 480px) {
+  main footer section {
+    padding-left: 100px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 97%;
+    justify-content: space-between;
+  }
+}
+main footer section .ft-link {
   padding-left: 77px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-body main footer section .ft-link h1 {
+@media (max-width: 768px) {
+  main footer section .ft-link {
+    padding-left: 0;
+  }
+}
+@media (max-width: 1024px) {
+  main footer section .ft-link {
+    padding-left: 0;
+  }
+}
+main footer section .ft-link h1 {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(249, 219, 219);
 }
-body main footer section .ft-link a {
+main footer section .ft-link a {
   font-size: 18px;
   color: #848481;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   transition: 0.5s;
 }
-body main footer section .ft-link a:hover {
+main footer section .ft-link a:hover {
   color: #5cace4;
 }
-body main footer section .icons {
+main footer section .icons {
   padding-right: 232px;
   padding-top: 34px;
   display: flex;
   flex-direction: column;
   gap: 42px;
 }
+@media (max-width: 1024px) {
+  main footer section .icons {
+    padding-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  main footer section .icons {
+    padding-right: 0;
+  }
+}
 
 .servicesweb {
   height: 1000px;
 }
 .servicesweb main {
-  padding-top: 129px;
+  padding-top: 101px;
+}
+@media (max-width: 768px) {
+  .servicesweb main {
+    padding-top: 67px;
+  }
 }
 .servicesweb main #bg-color {
   width: 100%;
@@ -708,6 +994,11 @@ body main footer section .icons {
   margin-bottom: 100px;
   padding: 58px 70px;
 }
+@media (max-width: 1024px) {
+  .servicesweb main .offers-conteiner {
+    justify-content: center;
+  }
+}
 .servicesweb main .offers-conteiner .offers {
   height: 1500px;
   width: 647px;
@@ -741,6 +1032,11 @@ body main footer section .icons {
   font-size: 20px;
   font-weight: 700;
   color: #6c7070;
+}
+@media (max-width: 768px) {
+  .servicesweb main .offers-conteiner .offers .about p {
+    font-size: 18px;
+  }
 }
 .servicesweb main .offers-conteiner .attention {
   margin-top: 50px;
@@ -946,9 +1242,25 @@ body main footer section .icons {
   width: 90%;
   background-color: #527f1a;
 }
+@media (max-width: 768px) {
+  .servicesweb .barg {
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .servicesweb .barg div {
+    width: 200px;
+  }
+}
 .servicesweb .barg div img {
   position: absolute;
   top: -50px;
+}
+@media (max-width: 768px) {
+  .servicesweb .barg div img {
+    width: 170px;
+  }
 }
 .servicesweb .barg div h1 {
   margin-bottom: 12px;
@@ -957,10 +1269,20 @@ body main footer section .icons {
   color: white;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
 }
+@media (max-width: 1024px) {
+  .servicesweb .barg div h1 {
+    font-size: 25px;
+  }
+}
 .servicesweb .barg div p {
   font-size: 20px;
   color: white;
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
+}
+@media (max-width: 1024px) {
+  .servicesweb .barg div p {
+    font-size: 18px;
+  }
 }
 .servicesweb .barg div button {
   cursor: pointer;
@@ -1007,10 +1329,44 @@ body main footer section .icons {
     filter: hue-rotate(360deg);
   }
 }
+@media (max-width: 1024px) {
+  .contacts-body main .contact {
+    padding: 170px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-body main .contact {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-body main .contact {
+    padding-top: 120px;
+  }
+}
 .contacts-body main .contact .content {
   font-family: "BPG Nino Mkhedruli Bold", sans-serif;
   max-width: 800px;
   text-align: center;
+}
+@media (max-width: 1024px) {
+  .contacts-body main .contact .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-body main .contact .content {
+    margin-bottom: 0;
+    padding-top: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .contacts-body main .contact .content {
+    padding-top: 0;
+  }
 }
 .contacts-body main .contact .content h2 {
   margin-bottom: 25px;
@@ -1019,15 +1375,28 @@ body main footer section .icons {
   font-weight: 500;
 }
 .contacts-body main .contact .content p {
+  font-size: 25px;
   color: #fff;
   font-weight: 300;
+}
+@media (max-width: 1024px) {
+  .contacts-body main .contact .content p {
+    width: 400px;
+    font-size: 20px;
+  }
 }
 .contacts-body main .contact .container {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .contacts-body main .contact .container {
+    height: 1000px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
 }
 .contacts-body main .contact .container .contactInfo {
   justify-content: space-evenly;
@@ -1041,6 +1410,11 @@ body main footer section .icons {
           backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .contacts-body main .contact .container .contactInfo {
+    padding: 60px;
+  }
 }
 .contacts-body main .contact .container .contactInfo .box {
   position: relative;
@@ -1186,6 +1560,19 @@ body main footer section .icons {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .about .about-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .about .about-conteiner {
+    padding: 20px;
+  }
+}
 .about .about-conteiner .about-box {
   margin: 0 auto;
   background: transparent;
@@ -1199,6 +1586,12 @@ body main footer section .icons {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  .about .about-conteiner .about-box {
+    width: 600px;
+    height: 500px;
+  }
 }
 .about .about-conteiner .about-box h1 {
   font-size: 35px;
